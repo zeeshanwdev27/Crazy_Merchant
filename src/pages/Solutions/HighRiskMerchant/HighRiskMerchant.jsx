@@ -7,12 +7,21 @@ import CallCenterServices from '../../Industries/CallCenters/CallCenterServices.
 import HRMTraditionalMerchant from './HRMTraditionalMerchant.jsx'
 import HRMFAQs from './HRMFAQs.jsx'
 import CallCenterReadyToStart from '../../Industries/CallCenters/CallCenterReadyToStart.jsx'
-
+import { Helmet } from 'react-helmet'
 
 
 function HighRiskMerchant() {
   return (
     <>
+    <Helmet>
+        <title>High Risk Merchant Account Solutions - Crazy Merchants</title>
+          <meta 
+              name="description" 
+              content="Get tailored high-risk merchant account solutions with Crazy Merchants. Enjoy secure, reliable payment processing and tools designed to manage high-risk business transactions efficiently."    
+          />
+    </Helmet>
+
+
     <CallCenterHeroSection 
      title={'High Risk Merchant Account Solutions'} 
      description={'Tired of being rejected by payment processors? You’ve found your solution. As the #1 rated high-risk merchant account provider, we’ve helped over 10,000 businesses process $2+ billion annually. Our 98% approval rate and deep industry expertise mean you can start processing payments within 24-48 hours, even if other providers have turned you down. Plus, our dedicated account managers ensure your business keeps processing without interruption.'}

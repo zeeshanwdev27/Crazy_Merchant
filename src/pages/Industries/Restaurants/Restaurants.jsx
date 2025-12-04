@@ -5,10 +5,20 @@ import ResturantHighRisk from './ResturantHighRisk.jsx'
 import RestaurantPaymentGateways from './RestaurantPaymentGateways.jsx'
 import CallCenterServices from '../CallCenters/CallCenterServices.jsx'
 import CallCenterReadyToStart from '../CallCenters/CallCenterReadyToStart.jsx'
+import { Helmet } from 'react-helmet'
+
 
 function Restaurants() {
   return (
     <>
+    <Helmet>
+        <title>Resturant Businesses Merchant Account - Crazy Merchants</title>
+        <meta 
+           name="description" 
+           content="Get a merchant account for your restaurant business with Crazy Merchants. Enjoy fast, secure payment processing, easy integrations, and tools to grow your restaurant efficiently." 
+        />
+    </Helmet>
+
     <CallCenterHeroSection 
        title={'Merchant Account for Resturant Business'} 
        description={"Restaurant businesses operate in a dynamic and fast-paced environment where managing payments efficiently is essential. With high customer traffic, peak-hour rush, and diverse payment methods, many traditional processors struggle to meet the unique needs of restaurant merchants. At Crazy Merchants, we offer specialized merchant account solutions tailored specifically for restaurants, ensuring smooth, secure, and reliable payment processing. Our services are designed to handle high-volume transactions, quick payment turnarounds, and the operational demands of the food service industry — so you can focus on delivering exceptional dining experiences while we take care of your payment needs."}

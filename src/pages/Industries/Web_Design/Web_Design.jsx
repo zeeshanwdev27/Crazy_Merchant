@@ -6,12 +6,21 @@ import WDHighRiskDesgination from './WDHighRiskDesgination.jsx'
 import CallCenterServices from '../CallCenters/CallCenterServices.jsx'
 import BestWebDesign from './BestWebDesign.jsx'
 import CallCenterReadyToStart from '../CallCenters/CallCenterReadyToStart.jsx'
-
+import { Helmet } from 'react-helmet'
 
 
 function Web_Design() {
   return (
     <>
+      <Helmet>
+            <title>SEO & Web Design Merchant Account - Crazy Merchants</title>
+              <meta 
+                  name="description" 
+                  content="Get a merchant account for SEO and web design businesses with Crazy Merchants. Enjoy fast, secure payment processing, easy integrations, and tools to grow your digital services." 
+              />
+      </Helmet>
+
+
     <CallCenterHeroSection 
        title={'Merchant Account for SEO & Web Design'} 
        description={"A high-risk merchant account is essential for web design and SEO businesses. These specialized payment processing accounts are designed for merchants classified in high-risk categories, providing the necessary solutions for online credit card processing in the web design and SEO industry. At Crazy Merchant, we serve search engine optimization merchants, providing customized merchant account services and payment processing solutions. Choose a company with years of experience and over 20 financial partners."}

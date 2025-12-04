@@ -5,10 +5,19 @@ import DigitalBookHighRisk from './DigitalBookHighRisk.jsx'
 import DigitalBookPaymentGateways from './DigitalBookPaymentGateways.jsx'
 import CallCenterServices from '../CallCenters/CallCenterServices.jsx'
 import CallCenterReadyToStart from '../CallCenters/CallCenterReadyToStart.jsx'
+import { Helmet } from 'react-helmet'
 
 function Digital_Books() {
   return (
     <>
+    <Helmet>
+        <title>Digital Books Merchant Account - Crazy Merchants</title>
+        <meta 
+          name="description" 
+          content="Get a merchant account for selling digital books with Crazy Merchants. Enjoy fast, secure payment processing, easy integrations, and tools to grow your online book business." 
+        />
+    </Helmet>
+
     <CallCenterHeroSection 
        title={'Merchant Account for Digital Books'} 
        description={"Digital book businesses operate in a fast-growing, competitive market where managing payments can be complex. Due to higher chargeback risks and subscription variability, many traditional processors hesitate to support digital content merchants. At Crazy Merchants, we provide specialized merchant accounts for digital books, designed to handle high-risk operations while ensuring smooth, secure, and reliable payment processing."}

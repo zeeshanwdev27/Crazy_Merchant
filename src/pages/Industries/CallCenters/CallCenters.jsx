@@ -5,11 +5,19 @@ import CallCenterHighRisk from './CallCenterHighRisk.jsx'
 import CallCenterPaymentGateways from './CallCenterPaymentGateways.jsx'
 import CallCenterServices from './CallCenterServices.jsx'
 import CallCenterReadyToStart from './CallCenterReadyToStart.jsx'
-
+import { Helmet } from 'react-helmet'
 
 function CallCenters() {
   return (
     <>
+     <Helmet>
+        <title>CallCenter Payment Processing - Crazy Merchants</title>
+        <meta 
+          name="description" 
+         content="Simplify and secure your call center payment processing with Crazy Merchants. Explore reliable solutions, seamless integrations, and advanced tools to manage transactions efficiently."  
+          />
+    </Helmet>
+
     <CallCenterHeroSection 
     title={'Merchant Account For Call Centers'} 
     description={'Call centers handle large volumes of transactions and recurring billing, which often leads traditional processors to label them as high-risk. This creates hurdles like declined payments, chargebacks, and compliance issues. At Crazy Merchants, we offer specialized Call Center Merchant Accounts built to support your operational needs. Our tailored solutions ensure secure, reliable payment processing with enhanced fraud prevention, smoother customer transactions, and optimized approval rates—so your business runs without interruptions.'}

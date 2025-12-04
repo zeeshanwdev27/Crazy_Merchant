@@ -5,13 +5,22 @@ import CBFeatures from './CBFeatures.jsx'
 import CBServices from './CBServices.jsx'
 import CBWhyChargeBack from './CBWhyChargeBack.jsx'
 import CallCenterReadyToStart from '../../Industries/CallCenters/CallCenterReadyToStart.jsx'
-
+import { Helmet } from 'react-helmet'
 
 
 
 function ChargerBack_Management() {
   return (
     <>
+    <Helmet>
+        <title>Chargeback Management Payment Gateway - Crazy Merchants</title>
+          <meta 
+              name="description" 
+              content="Protect your business with Crazy Merchants' chargeback management payment gateway. Enjoy secure transactions, effective dispute handling, and tools to reduce payment risks."  
+          />
+    </Helmet>
+
+
     <CallCenterHeroSection 
      title={'Advanced Chargeback Management Payment Gateway'} 
      description={'Chargeback management is crucial for maintaining a healthy business in the world of e-commerce and card-not-present transactions. Our comprehensive approach helps you tackle chargebacks effectively:'}

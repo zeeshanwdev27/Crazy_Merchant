@@ -5,11 +5,20 @@ import FPFeatures from './FPFeatures.jsx'
 import FPServices from './FPServices.jsx'
 import FPTransactions from './FPTransactions.jsx'
 import CallCenterReadyToStart from '../../Industries/CallCenters/CallCenterReadyToStart.jsx'
-
+import { Helmet } from 'react-helmet'
 
 function Fraud_prevention() {
   return (
     <>
+    <Helmet>
+        <title>Fraud Prevention - Crazy Merchants</title>
+          <meta 
+              name="description" 
+              content="Protect your business with Crazy Merchants' fraud prevention solutions. Ensure secure transactions, detect suspicious activity, and minimize risks for your payments."   
+          />
+    </Helmet>
+
+
     <CallCenterHeroSection 
      title={'Safeguard Your Business with Intelligent Fraud Prevention'} 
      description={'In an era of increasingly sophisticated cyber threats, robust fraud prevention is essential for protecting your business and customers. Protect your business from fraudulent transactions with intelligent fraud detection and prevention from Crazy Merchants. Our comprehensive approach combines cutting-edge technology with industry expertise:'}

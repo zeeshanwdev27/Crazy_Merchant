@@ -5,13 +5,22 @@ import MerchantFeatures from './MerchantFeatures.jsx'
 import OurServices from './OurServices.jsx'
 import MerchantAbout from './MerchantAbout.jsx'
 import CallCenterReadyToStart from '../../Industries/CallCenters/CallCenterReadyToStart.jsx'
-
+import { Helmet } from 'react-helmet'
 
 
 
 function MerchantServices() {
   return (
     <>
+     <Helmet>
+        <title>Merchant Services Solutions - Crazy Merchants</title>
+          <meta 
+              name="description" 
+               content="Discover comprehensive merchant services solutions with Crazy Merchants. Enjoy secure payment processing, seamless integrations, and tools to grow your business efficiently."     
+          />
+      </Helmet>
+
+
     <CallCenterHeroSection 
      title={'Complete Merchant Services Solutions'} 
      description={'Our merchant services provide everything you need to process payments and grow your business. Here’s what you get:'}

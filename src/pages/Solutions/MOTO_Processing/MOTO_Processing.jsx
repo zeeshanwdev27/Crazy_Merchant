@@ -5,12 +5,21 @@ import MotoFeatures from './MotoFeatures.jsx'
 import MotoServices from './MotoServices.jsx'
 import MotoAbout from './MotoAbout.jsx'
 import CallCenterReadyToStart from '../../Industries/CallCenters/CallCenterReadyToStart.jsx'
-
+import { Helmet } from 'react-helmet'
 
 
 function MOTO_Processing() {
   return (
     <>
+      <Helmet>
+        <title>MOTO Payment Processing - Crazy Merchants</title>
+          <meta 
+               name="description" 
+               content="Simplify MOTO (Mail Order/Telephone Order) payment processing with Crazy Merchants. Enjoy secure transactions, fast processing, and tools to manage remote payments efficiently." 
+          />
+      </Helmet>
+
+
     <CallCenterHeroSection 
      title={'Streamline Your MOTO Payment Processing'} 
      description={'A MOTO (Mail Order/Telephone Order) merchant account is essential for businesses that process card-not-present transactions through mail or phone orders. Our specialized solutions offer comprehensive benefits for MOTO businesses:'}

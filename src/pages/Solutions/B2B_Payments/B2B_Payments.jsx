@@ -5,11 +5,20 @@ import B2BFeatures from './B2BFeatures.jsx'
 import B2BServices from './B2BServices.jsx'
 import B2BAbout from './B2BAbout.jsx'
 import CallCenterReadyToStart from '../../Industries/CallCenters/CallCenterReadyToStart.jsx'
-
+import { Helmet } from 'react-helmet'
 
 function B2B_Payments() {
   return (
     <>
+    <Helmet>
+        <title>B2B Merchant Accounts - Crazy Merchants</title>
+          <meta 
+              name="description" 
+              content="Get a B2B merchant account with Crazy Merchants. Enjoy secure, efficient payment processing, seamless integrations, and tools to simplify transactions between businesses." 
+          />
+      </Helmet>
+
+
     <CallCenterHeroSection 
      title={'B2B Merchant Accounts & Payment Solutions'} 
      description={'A robust payment processing system is crucial in the world of B2B credit card transactions. Crazy Merchant offers tailored merchant account solutions that address the unique challenges of B2B payments, including high-volume transactions, recurring billing, and complex payment terms. Choose a partner who offers multiple banks and secure payments for B2B business models.'}

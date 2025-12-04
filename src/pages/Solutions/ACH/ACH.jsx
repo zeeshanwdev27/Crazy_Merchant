@@ -5,12 +5,20 @@ import ACHFeatures from './ACHFeatures.jsx'
 import ACHServices from './ACHServices.jsx'
 import ACHDifference from './ACHDifference.jsx'
 import CallCenterReadyToStart from '../../Industries/CallCenters/CallCenterReadyToStart.jsx'
-
+import { Helmet } from 'react-helmet'
 
 
 function ACH() {
   return (
     <>
+     <Helmet>
+         <title>ACH Solutions Payment Processing - Crazy Merchants</title>
+            <meta 
+                name="description" 
+                content="Simplify ACH payment processing with Crazy Merchants. Enjoy fast, secure transactions, seamless integrations, and tools to efficiently manage your business payments."  
+            />
+      </Helmet>
+
     <CallCenterHeroSection 
      title={'Optimize Your Payment Processing with ACH Solutions'} 
      description={'ACH payment processing offers a secure and cost-effective way to handle transactions. This electronic network facilitates fund transfers between banks without the need for paper checks, credit card networks, wire transfers, or cash. Here’s what you need to know about ACH transactions:'}

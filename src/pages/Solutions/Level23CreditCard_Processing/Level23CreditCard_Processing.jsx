@@ -5,11 +5,20 @@ import LevelFeatures from './LevelFeatures.jsx'
 import LevelServices from './LevelServices.jsx'
 import LevelAbout from './LevelAbout.jsx'
 import CallCenterReadyToStart from '../../Industries/CallCenters/CallCenterReadyToStart.jsx'
-
+import { Helmet } from 'react-helmet'
 
 function Level23CreditCard_Processing() {
   return (
     <>
+    <Helmet>
+        <title>Maximize Savings & Level 2, 3 Data Processing - Crazy Merchants</title>
+          <meta 
+              name="description" 
+              content="Maximize savings with Crazy Merchants' Level 2 and Level 3 data processing. Enjoy optimized payment processing, reduced transaction costs, and enhanced business efficiency."    
+          />
+    </Helmet>
+
+
     <CallCenterHeroSection 
      title={'Maximize Savings and Insights with Level 2 & 3 Data Processing'} 
      description={'Every credit card transaction is considered a level 1, level 2, or level 3 transaction. The level increases depending on how much card data is passed. The higher the level, the more data needed to complete the transactions. Level 2 & 3 data processing is essential for businesses engaged in B2B credit card transactions. Our advanced solutions offer numerous benefits:'}

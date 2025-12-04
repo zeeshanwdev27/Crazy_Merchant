@@ -1,12 +1,25 @@
 import React, { useState } from 'react'
 import { ArrowLeft, ArrowBigRightDash   } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet'
 
 function Blog1() {
 
     const navigate = useNavigate();
     
   return (
+    <>
+    <Helmet>
+        <title>What Are High-Risk Merchant Accounts | Crazy Merchants</title>
+        <meta 
+        name="description" 
+        content="Learn what high-risk merchant accounts are, who needs them, their benefits, and how to apply. Ideal guide for travel, vape, digital service, and subscription businesses."
+        />
+        <meta property="og:title" content="What Are High-Risk Merchant Accounts" />
+        <meta property="og:description" content="Explore what high-risk merchant accounts are and why certain industries need them." />
+        <meta property="og:type" content="article" />
+    </Helmet>
+    
     <div className="min-h-screen flex flex-col gap-15 pt-25 lg:pt-30 xl:pt-30 pb-20 px-4 sm:px-6 md:px-8 xl:px-70 bg-[url('/Blogs/blogsbackground.png')] bg-cover bg-no-repeat overflow-hidden text-white">
     <div className='flex flex-col gap-8 sm:gap-12 lg:gap-10'>
                 
@@ -166,6 +179,8 @@ function Blog1() {
 
     </div>
     </div>
+
+    </>
   )
 }
 

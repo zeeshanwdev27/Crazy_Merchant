@@ -8,13 +8,22 @@ import VapeHighRisk from './VapeHighRisk.jsx'
 import SecurePayment from './SecurePayment.jsx'
 import VapePaymentProcessing from './VapePaymentProcessing.jsx'
 import CallCenterReadyToStart from '../CallCenters/CallCenterReadyToStart.jsx'
-
+import { Helmet } from 'react-helmet'
 
 
 
 function Vape() {
   return (
     <>
+    <Helmet>
+        <title>Vape Credit Card Processing Merchant Account - Crazy Merchants</title>
+          <meta 
+              name="description" 
+              content="Get a merchant account for vape businesses with Crazy Merchants. Enjoy secure, fast credit card processing, seamless integrations, and tools to grow your vape business efficiently." 
+          />
+    </Helmet>
+
+
     <CallCenterHeroSection 
        title={'Vape Credit Card Processing and Merchant Account'} 
        description={"E-cigarette and vape merchants face unique challenges in the payment processing world. As a high-risk industry, many traditional banks and payment processors are hesitant to work with vape merchants. At Crazy Merchant, we specialize in providing merchant accounts and payment processing tailored to the specific needs of the vape industry, ensuring you can process payments securely and efficiently."}

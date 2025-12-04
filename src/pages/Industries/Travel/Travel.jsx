@@ -6,12 +6,22 @@ import WhyTravelHighRisk from './WhyTravelHighRisk.jsx'
 import CallCenterServices from '../CallCenters/CallCenterServices.jsx'
 import HighRiskDesignation from './HighRiskDesignation.jsx'
 import CallCenterReadyToStart from '../CallCenters/CallCenterReadyToStart.jsx'
-
+import { Helmet } from 'react-helmet'
 
 
 function Travel() {
   return (
     <>
+    <Helmet>
+        <title>High-Risk Travel Merchant Account - Crazy Merchants</title>
+        <meta 
+           name="description" 
+           content="Secure a high-risk travel merchant account with Crazy Merchants. Enjoy fast, reliable payment processing, risk management, and tools to grow your travel business confidently." 
+        />
+    </Helmet>
+
+
+
     <CallCenterHeroSection 
        title={'Set Up a High-Risk Travel Merchant Account'} 
        description={"Travel businesses face unique challenges in the payment processing world. As a high-risk industry, many traditional banks and payment processors are hesitant to work with travel merchants. At Crazy Merchants, we specialize in providing merchant accounts tailored to the specific needs of the travel industry, ensuring you can process payments securely and efficiently."}

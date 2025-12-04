@@ -74,11 +74,13 @@ function Navbar() {
     <div className={`fixed flex justify-between lg:justify-evenly px-6 lg:px-0 py-5 top-0 left-0 w-full z-50 transition-all duration-300 ${ isScrolled ? 'bg-white shadow-lg py-3' : 'bg-transparent'}`}>
 
         {/* Logo */}
+        <a href={'/'}>
         <img 
           src="/Navbar/logo.png" 
           className='w-35 h-10' 
           alt="CrazyMerchant_Logo" 
         />
+        </a>
 
         {/* Hamburger Menu for medium and small screens */}
         <button

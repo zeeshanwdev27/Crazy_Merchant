@@ -5,11 +5,19 @@ import GroceriesHighRisk from './GroceriesHighRisk.jsx'
 import GroceriesPaymentGateways from './GroceriesPaymentGateways.jsx'
 import CallCenterServices from '../CallCenters/CallCenterServices.jsx'
 import CallCenterReadyToStart from '../CallCenters/CallCenterReadyToStart.jsx'
-
+import { Helmet } from 'react-helmet'
 
 function Groceries() {
   return (
     <>
+    <Helmet>
+        <title>Grocery Stores Merchant Account - Crazy Merchants</title>
+        <meta 
+           name="description" 
+           content="Get a merchant account for your grocery store with Crazy Merchants. Benefit from fast, secure payment processing, seamless integrations, and tools to grow your business efficiently." 
+        />
+    </Helmet>
+
     <CallCenterHeroSection 
        title={'Merchant Account for Grocery Stores'} 
        description={"Grocery store businesses operate in a fast-moving retail environment where managing payments can be challenging. Due to higher transaction volumes, seasonal fluctuations, and occasional chargeback risks, many traditional processors hesitate to support grocery merchants. At Crazy Merchants, we provide specialized merchant accounts for grocery stores, designed to handle high-volume operations while ensuring smooth, secure, and reliable payment processing."}

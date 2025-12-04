@@ -5,10 +5,21 @@ import OutBoundHighRisk from './OutBoundHighRisk.jsx'
 import OutBoundPaymentGateways from './OutBoundPaymentGateways.jsx'
 import CallCenterServices from '../CallCenters/CallCenterServices.jsx'
 import CallCenterReadyToStart from '../CallCenters/CallCenterReadyToStart.jsx'
+import { Helmet } from 'react-helmet'
+
 
 function OutBound() {
   return (
     <>
+    <Helmet>
+        <title>Outbound Product Selling Merchant Account - Crazy Merchants</title>
+        <meta 
+           name="description" 
+          content="Get a merchant account for outbound product selling with Crazy Merchants. Enjoy fast, secure payment processing, seamless integrations, and tools to expand your sales globally." 
+        />
+    </Helmet>
+
+
     <CallCenterHeroSection 
         title={'Merchant Account for Outbound Product Selling'} 
         description={"Outbound product selling businesses operate in a fast-paced environment where managing payments can be challenging. Due to higher chargeback risks and fluctuating sales campaigns, many traditional processors hesitate to support outbound sellers. At Crazy Merchants, we provide specialized merchant accounts for outbound product selling, designed to handle high-risk operations while ensuring smooth, secure, and reliable payment processing."}
