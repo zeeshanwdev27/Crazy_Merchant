@@ -5,10 +5,22 @@ import RecurringFeatures from './RecurringFeatures.jsx'
 import RecurringServices from './RecurringServices.jsx'
 import RecurreingPaymentNeeds from './RecurreingPaymentNeeds.jsx'
 import CallCenterReadyToStart from '../../Industries/CallCenters/CallCenterReadyToStart.jsx'
+import { Helmet } from 'react-helmet'
+
 
 function Recurring_Payment() {
   return (
     <>
+      <Helmet>
+          <title>Recurring Billing Solutions - Crazy Merchants</title>
+            <meta 
+                name="description" 
+                content="Simplify recurring billing with Crazy Merchants. Enjoy automated, secure payment processing, easy subscription management, and tools to streamline your business revenue." 
+            />
+      </Helmet>
+
+
+
     <CallCenterHeroSection 
      title={'Recurring Billing Solutions'} 
      description={'Our recurring payment processing solutions are designed to meet the complex needs of subscription-based businesses. Here’s what we offer:'}

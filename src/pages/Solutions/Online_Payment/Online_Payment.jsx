@@ -5,11 +5,20 @@ import OnlineFeatures from './OnlineFeatures.jsx'
 import OnlinePaymentServices from './OnlinePaymentServices.jsx'
 import PaymentProcessing from './PaymentProcessing.jsx'
 import CallCenterReadyToStart from '../../Industries/CallCenters/CallCenterReadyToStart.jsx'
-
+import { Helmet } from 'react-helmet'
 
 function Online_Payment() {
   return (
     <>
+      <Helmet>
+            <title>E-commerce Credit Card Solutions - Crazy Merchants</title>
+              <meta 
+                   name="description" 
+                    content="Get reliable e-commerce credit card solutions with Crazy Merchants. Enjoy fast, secure payment processing, seamless integrations, and tools to grow your online business." 
+              />
+      </Helmet>
+
+
     <CallCenterHeroSection 
      title={'E-commerce Credit Card Processing Solutions'} 
      description={'Our e-commerce payment solutions are tailored to meet the diverse needs of e-commerce businesses. Here’s what we offer:'}

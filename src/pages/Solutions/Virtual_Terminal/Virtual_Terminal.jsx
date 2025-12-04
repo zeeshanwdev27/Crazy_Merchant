@@ -5,11 +5,20 @@ import VirtualFeatures from './VirtualFeatures.jsx'
 import VirtualTerminalServices from './VirtualTerminalServices.jsx'
 import WhatVirtualTerminal from './WhatVirtualTerminal.jsx'
 import CallCenterReadyToStart from '../../Industries/CallCenters/CallCenterReadyToStart.jsx'
-
+import { Helmet } from 'react-helmet'
 
 function Virtual_Terminal() {
   return (
     <>
+      <Helmet>
+          <title>Virtual Terminal Capabilities - Crazy Merchants</title>
+            <meta 
+                name="description" 
+                content="Manage payments efficiently with Crazy Merchants' virtual terminal capabilities. Enjoy secure, fast transactions and tools to process payments from any location."  
+            />
+      </Helmet>
+
+
     <CallCenterHeroSection 
      title={'Empower Your Business with Advanced Virtual Terminal Capabilities'} 
      description={'Our virtual terminal solutions are designed to meet the diverse needs of modern businesses. Accept payments anywhere with our virtual credit card terminal. We’ll get you set up to accept credit card payments quickly. Here’s what we offer:'}

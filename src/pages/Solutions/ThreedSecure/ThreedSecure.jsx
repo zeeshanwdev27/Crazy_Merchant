@@ -4,12 +4,21 @@ import GetStartedSteps from '../../Industries/CallCenters/GetStartedSteps.jsx'
 import TSFeatures from './TSFeatures.jsx'
 import TSServices from './TSServices.jsx'
 import CallCenterReadyToStart from '../../Industries/CallCenters/CallCenterReadyToStart.jsx'
-
+import { Helmet } from 'react-helmet'
 
 
 function ThreedSecure() {
   return (
     <>
+      <Helmet>
+          <title>3D Secure Payment Gateway - Crazy Merchants</title>
+            <meta 
+                name="description" 
+                content="Protect your online transactions with Crazy Merchants' 3D Secure payment gateway. Enjoy enhanced security, fast processing, and tools to manage payments confidently."  
+            />
+      </Helmet>
+
+
     <CallCenterHeroSection 
      title={'3D Secure Payment Gateway and Payment Processing'} 
      description={'If you process online payments, you’ve heard of 3D Secure. But what is it? In short, 3D Secure (sometimes called Visa Secure) is an additional authentication process created by Visa and MasterCard to add an additional layer of security for Card Not Present (CNP) merchants. Moreover, 3D Secure ties the financial authorization process with online authentication based on a three-domain model (3D). The three domains consist of:'}

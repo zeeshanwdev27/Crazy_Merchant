@@ -4,12 +4,21 @@ import GetStartedSteps from '../../Industries/CallCenters/GetStartedSteps.jsx'
 import MobileFeatures from './MobileFeatures.jsx'
 import MobileServices from './MobileServices.jsx'
 import CallCenterReadyToStart from '../../Industries/CallCenters/CallCenterReadyToStart.jsx'
-
+import { Helmet } from 'react-helmet'
 
 
 function Mobile_Payments() {
   return (
     <>
+      <Helmet>
+        <title>Mobile Merchant Payment Solutions - Crazy Merchants</title>
+          <meta 
+              name="description" 
+               content="Access mobile merchant payment solutions with Crazy Merchants. Enjoy fast, secure transactions, seamless integrations, and tools to manage payments on the go."     
+          />
+      </Helmet>
+
+
     <CallCenterHeroSection 
      title={'Mobile Merchant Payment Solutions'} 
      description={'Our mobile payment processing services are designed to meet the demands of today’s mobile-centric consumers while providing businesses with secure and efficient payment processing. Here’s what we offer:'}
