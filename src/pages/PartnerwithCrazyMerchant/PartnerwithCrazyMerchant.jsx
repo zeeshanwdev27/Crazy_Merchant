@@ -3,7 +3,7 @@ import PwcmHeroSection from './PwcmHeroSection.jsx'
 import WhyPartnerWithUs from './WhyPartnerWithUs.jsx'
 import CMReferral from './CMReferral.jsx'
 import MaxYourEarnings from './MaxYourEarnings.jsx'
-import CallCenterReadyToStart from '../CallCenters/CallCenterReadyToStart.jsx'
+import CallCenterReadyToStart from '../Industries/CallCenters/CallCenterReadyToStart.jsx'
 
 
 function PartnerwithCrazyMerchant() {
