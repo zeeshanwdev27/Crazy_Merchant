@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {  
+  PhoneCall,
   X,
   ChevronRight
 } from "lucide-react";
@@ -223,20 +224,13 @@ function MbOverlay({ isOpen, setIsOpen }) {
 
             {/* Optional: Call to Action Buttons */}
             <div className="flex-shrink-0 p-4 border-t border-gray-100 space-y-3 w-full md:max-w-2xl md:mx-auto">
-              {/* <Link
-               to="tel:#"
-                onClick={handleLinkClick}
-                className="flex items-center justify-center gap-2 w-full p-4 bg-gradient-to-r from-amber-500 to-amber-500 hover:from-amber-500 hover:to-amber-500 text-white rounded-xl font-semibold transition-all duration-300 active:scale-95"
-              >
-                <Phone className="w-5 h-5" />
-                +1-111-111-1111
-              </Link> */}
               <Link
-                to="/contact-us/"
+                 to="tel:+8886519042"
                 onClick={handleLinkClick}
-                className="flex items-center justify-center gap-2 w-full p-4 border-2 border-amber-500 text-amber-500 hover:bg-indigo-50 rounded-xl font-semibold transition-all duration-300 active:scale-95"
+                className="flex items-center justify-center gap-3 text-lg w-full p-4 border-2 border-amber-500 text-amber-500 hover:bg-indigo-50 rounded-xl font-semibold transition-all duration-300 active:scale-95"
               >
-                Contact With Us
+                <PhoneCall className="w-5 h-5" strokeWidth={3} />
+                888-651-9042
               </Link>
             </div>
           </motion.div>

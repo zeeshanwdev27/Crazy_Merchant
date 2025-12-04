@@ -32,34 +32,53 @@ function Footer() {
           <div className='flex flex-col lg:flex-row justify-between gap-15 lg:gap-0'>
 
             {/* Social Media */}
-            <div className='flex flex-col gap-7'> 
-              <h1 className='text-[#F29200] text-2xl sm:text-3xl font-bold'>Social media</h1>
+            <div className='flex flex-col gap-10'> 
+
+
+              <div className='flex flex-col gap-7'>
+
+                <h1 className='text-[#F29200] text-2xl sm:text-3xl font-bold'>Social media</h1>
+
               <div className='grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-5'>
-                <div className='flex gap-1 items-center hover:text-[#F29200] cursor-pointer'> 
+                <a href='https://www.instagram.com/crazymerchants/' className='flex gap-1 items-center hover:text-[#F29200] cursor-pointer'> 
                   <span className='text-base sm:text-lg'>Instagram</span>
                   <ArrowUpRight className='w-4 h-4 sm:w-5 sm:h-5' strokeWidth={1}/>
-                </div>
-                <div className='flex gap-1 items-center hover:text-[#F29200] cursor-pointer'> 
-                  <span className='text-base sm:text-lg'>Twitter</span>
-                  <ArrowUpRight className='w-4 h-4 sm:w-5 sm:h-5' strokeWidth={1}/>
-                </div>
-                <div className='flex gap-1 items-center hover:text-[#F29200] cursor-pointer'> 
-                  <span className='text-base sm:text-lg'>Tiktok</span>
-                  <ArrowUpRight className='w-4 h-4 sm:w-5 sm:h-5' strokeWidth={1}/>
-                </div>
-                <div className='flex gap-1 items-center hover:text-[#F29200] cursor-pointer'> 
+                </a>
+                <a href='https://www.facebook.com/crazymerchants1' className='flex gap-1 items-center hover:text-[#F29200] cursor-pointer'> 
                   <span className='text-base sm:text-lg'>Facebook</span>
                   <ArrowUpRight className='w-4 h-4 sm:w-5 sm:h-5' strokeWidth={1}/>
-                </div>
-                <div className='flex gap-1 items-center hover:text-[#F29200] cursor-pointer'> 
+                </a>
+                <a href='https://www.linkedin.com/company/crazymerchants' className='flex gap-1 items-center hover:text-[#F29200] cursor-pointer'> 
                   <span className='text-base sm:text-lg'>LinkedIn</span>
                   <ArrowUpRight className='w-4 h-4 sm:w-5 sm:h-5' strokeWidth={1}/>
-                </div>
-                <div className='flex gap-1 items-center hover:text-[#F29200] cursor-pointer'> 
-                  <span className='text-base sm:text-lg'>Youtube</span>
-                  <ArrowUpRight className='w-4 h-4 sm:w-5 sm:h-5' strokeWidth={1}/>
-                </div>
+                </a>
               </div>
+
+              </div>
+
+
+              <div className='flex flex-col gap-7'>
+                          {/* Address */}
+          <div className='flex flex-col lg:flex-row gap-10'> 
+
+            <div className='flex flex-col gap-5'>
+            <h1 className='text-[#F29200] text-2xl sm:text-2xl font-bold'>Address</h1>
+            <span className='text-base sm:text-lg w-full max-w-full lg:max-w-sm'>
+              TX USA
+            </span>
+            </div>
+
+            <div className='flex flex-col gap-5'>
+            <h1 className='text-[#F29200] text-2xl sm:text-2xl font-bold'>Email</h1>
+            <Link to={"mailto:support@crazymerchants.com"} className='text-base sm:text-lg w-full max-w-full lg:max-w-sm hover:text-amber-500'>
+              support@crazymerchants.com
+            </Link>
+            </div>
+ 
+          </div>
+
+              </div>
+              
             </div>
 
             {/* Links */}
@@ -120,28 +139,21 @@ function Footer() {
 
           </div>
 
-          {/* Address */}
-          <div className='flex flex-col gap-7'> 
-            <h1 className='text-[#F29200] text-2xl sm:text-3xl font-bold'>Address</h1>
-            <span className='text-base sm:text-lg w-full max-w-full lg:max-w-sm'>
-              475 Cherry Dr, Troy, Michigan 48083 United States ( (248) 823-3200 )
-            </span>
-          </div>
+
 
         </div>
       </div>
 
+      
+
       {/* Bottom Footer */}
       <div className='py-10 px-4 sm:px-10 lg:px-40 flex flex-col sm:flex-row justify-between gap-5 sm:gap-0'>
         <p className='text-sm sm:text-md  lg:text-lg font-medium text-gray-600 text-center sm:text-left'>
-          © 2024 Copyright By Sansbro - Finestra
+          Copyright © 2025 Crazy Merchants. All rights reserved.
         </p>
         <ul className='flex flex-wrap justify-center sm:justify-start gap-3 sm:gap-5'>
-          <li className='text-sm sm:text-md lg:text-lg hover:text-[#F29200] cursor-pointer'>Terms</li>
-          <li className='text-sm sm:text-md lg:text-lg hover:text-[#F29200] cursor-pointer'>Privacy</li>
-          <li className='text-sm sm:text-md lg:text-lg hover:text-[#F29200] cursor-pointer'>Cookies</li>
-          <li className='text-sm sm:text-md lg:text-lg hover:text-[#F29200] cursor-pointer'>Legal</li>
-          <li className='text-sm sm:text-md lg:text-lg hover:text-[#F29200] cursor-pointer'>Recalls</li>
+          <Link to={'/privacy-policy'}><li className='text-sm sm:text-md lg:text-lg hover:text-[#F29200] cursor-pointer'>Privacy Policy</li></Link>
+          <Link to={'/terms-of-service'}><li className='text-sm sm:text-md lg:text-lg hover:text-[#F29200] cursor-pointer'>Terms of Service</li></Link>
         </ul>
       </div>
     </>

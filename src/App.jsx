@@ -5,6 +5,8 @@ import Layout from "./Layout/Layout.jsx"
 const HomePage = React.lazy(()=> import('./pages/Home/HomePage.jsx'))
 const FAQs = React.lazy(()=> import('./pages/FAQs/FAQs.jsx'))
 const Blogs = React.lazy(()=> import('./pages/Blogs/Blogs.jsx'))
+const PrivacyPolicy = React.lazy(()=> import('./pages/PrivacyPolicy/PrivacyPolicy.jsx'))
+const TermsOfServices = React.lazy(()=> import('./pages/TermsOfServices/TermsOfServices.jsx'))
 
 
 // Industries Pages
@@ -95,6 +97,10 @@ const App = createBrowserRouter(
 
         {/* FAQS Sections */}
         <Route path="/faqs" element={<FAQs />} />
+
+
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-service" element={<TermsOfServices />} />
         
 
         

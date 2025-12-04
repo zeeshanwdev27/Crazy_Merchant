@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { ChevronDown  } from 'lucide-react';
-import { NavLink, useLocation } from "react-router-dom";
+import { ChevronDown, PhoneCall   } from 'lucide-react';
+import { Link, NavLink, useLocation } from "react-router-dom";
 import MbOverlay from './MbOverlay.jsx'
 
 function Navbar() {
@@ -316,13 +316,16 @@ function Navbar() {
 
           {/* Call To Actions */}
           <div className='flex gap-5 items-center justify-center'>
-            <button className={`p-2 px-5 rounded-xl border cursor-pointer transition-all duration-300 ${
+            <Link
+             to="tel:+8886519042"
+             className={`p-2 px-5 rounded-xl border cursor-pointer transition-all duration-300 flex gap-3 items-center ${
               isScrolled 
                 ? 'border-black text-black hover:border-[#F29200] hover:text-[#F29200]' 
                 : 'border-white text-white hover:bg-white hover:text-black'
             }`}>
+              <PhoneCall className='w-5 h-5'/>
               888-651-9042
-            </button>
+            </Link>
 
             <button className={`p-2 px-5 rounded-xl text-white cursor-pointer transition-all duration-300 ${
               isScrolled 
@@ -332,9 +335,6 @@ function Navbar() {
               Get Started
             </button>
 
-            {/* <Search className={`w-7 h-7 transition-all duration-300 ${
-              isScrolled ? 'text-black' : 'text-white'
-            }`}/> */}
           </div>
         </div>
 

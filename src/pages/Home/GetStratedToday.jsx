@@ -1,5 +1,6 @@
 import React from 'react'
 import { ArrowUpRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 function GetStratedToday() {
   return (
@@ -87,7 +88,7 @@ function GetStratedToday() {
             </div>
 
             
-            <div className='relative flex justify-center cursor-pointer group col-span-2 md:col-span-1'>
+            <Link className='relative flex justify-center cursor-pointer group col-span-2 md:col-span-1'>
               <img src="/Home/GetStarted/ViewIndustries.png" alt="ViewIndustries" className='w-80 h-40 md:w-40 md:h-35 lg:w-80 lg:h-50' />
              
                 <h1 className='absolute left-15 md:left-8 lg:left-10 top-3 md:top-5 lg:top-3 text-3xl md:text-xl lg:text-4xl text-white'>View <br /> All Industries</h1>
@@ -96,7 +97,7 @@ function GetStratedToday() {
                   <ArrowUpRight className='w-8 h-8 md:w-5 md:h-5 lg:w-8 lg:h-8 text-white'/>
                 </div>
              
-            </div>
+            </Link>
 
 
 
