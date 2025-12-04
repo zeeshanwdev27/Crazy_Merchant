@@ -87,17 +87,17 @@ function Navbar() {
           aria-label="Toggle menu"
         >
           <span
-            className={`w-6 h-0.5 ${ isScrolled ? 'bg-white' : 'bg-white'} transition-all duration-300 ${
+            className={`w-6 h-0.5 ${ isScrolled ? 'bg-black' : 'bg-white'} transition-all duration-300 ${
               isMenuOpen ? "rotate-45 translate-y-1.5" : ""
             }`}
           ></span>
           <span
-            className={`w-6 h-0.5 ${ isScrolled ? 'bg-white' : 'bg-white'} my-1.5 transition-all duration-300 ${
+            className={`w-6 h-0.5 ${ isScrolled ? 'bg-black' : 'bg-white'} my-1.5 transition-all duration-300 ${
               isMenuOpen ? "opacity-0" : ""
             }`}
           ></span>
           <span
-            className={`w-6 h-0.5 ${ isScrolled ? 'bg-white' : 'bg-white'} transition-all duration-300 ${
+            className={`w-6 h-0.5 ${ isScrolled ? 'bg-black' : 'bg-white'} transition-all duration-300 ${
               isMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
             }`}
           ></span>

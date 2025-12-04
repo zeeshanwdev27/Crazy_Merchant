@@ -9,7 +9,6 @@ function BlogsSections() {
     const [searchValue, setSearchValue] = useState("");
 
     
-
     const blogCards = [
         {
             image: 'Blogs/blog1.png',
@@ -76,9 +75,9 @@ function BlogsSections() {
                 className='w-full p-4 py-5 sm:py-6 lg:py-7 rounded-xl sm:rounded-2xl border-2 sm:border-3 border-[#F29200]/40 shadow-sm sm:shadow-md mx-auto flex flex-col gap-3 sm:gap-4 hover:bg-[#F29200] group hover:text-white cursor-pointer'
                 >
                     <div onClick={()=>navigate(`${data.blogLink}`)} className='flex flex-col gap-3 lg:gap-5'>
-                        <img src={data.image} alt={data.title} className='w-full h-60 xl:h-70 rounded-lg' />
+                        <img src={data.image} alt={data.title} className='w-full h-60 md:h-50 xl:h-60 rounded-lg' />
                         <h1 className='font-medium text-sm sm:text-base lg:text-lg line-clamp-2'>{data.title}</h1>
-                        <button onClick={()=>navigate(`${data.blogLink}`)}  className='py-2 px-4 bg-[#F29200] text-white w-full font-medium text-sm sm:text-base rounded-md group-hover:bg-white group-hover:text-[#F29200] cursor-pointer transition-colors duration-300'>
+                        <button onClick={()=>navigate(`${data.blogLink}`)}  className='py-2 lg:py-3 px-4 bg-[#F29200] text-white w-full font-medium text-sm sm:text-base rounded-md group-hover:bg-white group-hover:text-[#F29200] cursor-pointer transition-colors duration-300'>
                             Solutions
                         </button>
                     </div>

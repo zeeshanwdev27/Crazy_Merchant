@@ -77,7 +77,7 @@ const handleSearchSubmit = (e) => {
         </div>
 
         {/* Common Searches Options */}
-<div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 md:gap-5 mx-auto">
+<div className="flex flex-col lg:flex-row items-center gap-3 sm:gap-4 md:gap-5 mx-auto">
   <h3 className="text-sm sm:text-md font-medium">Common searches:</h3>
 
   <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-5">
@@ -124,7 +124,7 @@ const handleSearchSubmit = (e) => {
         >
             {duplicatedImages.map((item, index) => (
                 <motion.div 
-                    className='flex-shrink-0 mx-8 md:mx-12 ' 
+                    className='shrink-0 mx-8 md:mx-12 ' 
                     key={index}
                     whileHover={{ scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 300 }}

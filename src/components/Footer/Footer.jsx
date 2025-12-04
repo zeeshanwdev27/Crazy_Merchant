@@ -1,5 +1,6 @@
 import React from 'react'
 import { ArrowUpRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -62,38 +63,56 @@ function Footer() {
             </div>
 
             {/* Links */}
-            <div className='flex flex-col sm:flex-row gap-10 sm:gap-15 lg:gap-25 items-start sm:items-center'>
+            <div className='flex flex-col sm:flex-row gap-10 sm:gap-15 lg:gap-20 items-start '>
 
-              {/* Company */}
-              <div className='flex flex-col gap-5'>
-                <h1 className='text-[#F29200] text-lg sm:text-xl font-semibold'>Company</h1>
-                <div className='flex flex-col gap-2'>
-                  <p className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>About</p>
-                  <p className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>Pricing</p>
-                  <p className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>Jobs</p>
-                  <p className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>Blogs</p>
+              {/* Industries */}
+              <div className='flex flex-col gap-5 w-full max-w-sm'>
+                <h1 className='text-[#F29200] text-lg sm:text-xl font-semibold'>Industries</h1>
+                <div className='grid grid-cols-2 gap-15'>
+
+                <div className='flex flex-col gap-3'>
+                  <Link to={'/callcenters'} className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>Call Centers</Link>
+                  <Link to={'/digitalbooks'} className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>Digital Books</Link>
+                  <Link to={'/techsupport'} className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>Tech Support</Link>
+                  <Link to={'/restaurants'} className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>Resturant Businesses</Link>
+                  <Link to={'/outbound'} className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>Outbound Product Selling</Link>
+                  <Link to={'/medical'} className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>Medical Related Campaigns</Link>
+                </div>
+
+                <div className='flex flex-col gap-3'>
+                  <Link to={'/groceries'} className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>Groceries</Link>
+                  <Link to={'/travel'} className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>Travel</Link>
+                  <Link to={'/vape'} className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>Vape</Link>
+                  <Link to={'/ecommerce-websites'} className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>Eccomerce Websites</Link>
+                  <Link to={'/web-design'} className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>Web Design & Marketing</Link>
+                </div>
                 </div>
               </div>
 
-              {/* Product */}
-              <div className='flex flex-col gap-5'>
-                <h1 className='text-[#F29200] text-lg sm:text-xl font-semibold'>Product</h1>
-                <div className='flex flex-col gap-2'>
-                  <p className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>Sales Software</p>
-                  <p className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>Marketplace</p>
-                  <p className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>Terms & Conditions</p>
-                  <p className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>Privacy Policy</p>
-                </div>
-              </div>
+              {/* Solutions */}
+              <div className='flex flex-col gap-5 w-full max-w-sm'>
+                <h1 className='text-[#F29200] text-lg sm:text-xl font-semibold'>Solutions</h1>
+                <div className='grid grid-cols-2 gap-15'>
 
-              {/* Help Center */}
-              <div className='flex flex-col gap-5'>
-                <h1 className='text-[#F29200] text-lg sm:text-xl font-semibold'>Help Center</h1>
-                <div className='flex flex-col gap-2'>
-                  <p className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>Community</p>
-                  <p className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>Knowledge Base</p>
-                  <p className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>Academy</p>
-                  <p className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>Support</p>
+                <div className='flex flex-col gap-3'>
+                  <Link to={'/ach'} className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>ACH</Link>
+                  <Link to={'/3d-secure'} className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>3D Secure</Link>
+                  <Link to={'/b2b-payments'} className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>B2B Payments</Link>
+                  <Link to={'/merchant-services'} className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>Merchant Services</Link>
+                  <Link to={'/chargeback-management'} className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>Chargeback Management</Link>
+                  <Link to={'/payment-gateway'} className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>Payment Gateway</Link>
+                  <Link to={'/high-risk-merchant-account'} className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>High-Risk Merchant Account</Link>
+                </div>
+
+                <div className='flex flex-col gap-3'>
+                  <Link to={'/online-payment'} className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>Online Payments</Link>
+                  <Link to={'/fraud-prevention'} className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>Fraud Prevention</Link>
+                  <Link to={'/virtual-terminal'} className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>Virtual Terminal</Link>
+                  <Link to={'/moto-processing'} className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>MOTO Processing</Link>
+                  <Link to={'/level-2-and-3-credit-card-processing'} className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>Level 2 & 3 Processing</Link>
+                  <Link to={'/recurring-payment'} className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>Recurring Payments</Link>
+                  <Link to={'/mobile-payments'} className='text-base sm:text-lg hover:text-[#F29200] cursor-pointer'>Mobile Payments</Link>
+                </div>
                 </div>
               </div>
 

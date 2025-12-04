@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { 
-  Phone, 
+import {  
   X,
   ChevronRight
 } from "lucide-react";
@@ -16,24 +15,51 @@ function MbOverlay({ isOpen, setIsOpen }) {
       path: "/"
     },
     { 
-      text: "Services", 
+      text: "Industries", 
       submenu: [
-        { text: "Book Marketing", path: "/book-marketing-services" },
-        { text: "Book Writing", path: "/book-writing-services" },
-        { text: "Book Publishing", path: "/book-publishing-services" },
+        { text: "Call Centers", path: "/callcenters" },
+        { text: "Resturants Business", path: "/restaurants" },
+        { text: "Outbound Product Selling", path: "/outbound" },
+        { text: "Medical Related Campaigns", path: "/medical" },
+        { text: "Digital Books", path: "/digitalbooks" },
+        { text: "Tech Support", path: "/techsupport" },
+        { text: "Groceries", path: "/groceries" },
+        { text: "E-commerce Websites", path: "/ecommerce-websites" },
+        { text: "Travel", path: "/travel" },
+        { text: "Vape", path: "/vape" },
+        { text: "Web Design & Marketing", path: "/web-design" },
       ]
     },
     { 
-      text: "FAQ'S", 
-      path: "/faqs"
+      text: "Solutions", 
+      submenu: [
+        { text: "Merchant Services", path: "/merchant-services" },
+        { text: "ACH", path: "/ach" },
+        { text: "Chargeback Management", path: "/chargeback-management" },
+        { text: "High-Risk Merchant Account", path: "/high-risk-merchant-account" },
+        { text: "3D Secure", path: "/3d-secure" },
+        { text: "Fraud Prevention", path: "/fraud-prevention" },
+        { text: "Payment Gateway", path: "/payment-gateway" },
+        { text: "MOTO Processing", path: "/moto-processing" },
+        { text: "Level 2 & 3 Processing", path: "/level-2-and-3-credit-card-processing" },
+        { text: "Recurring Payments", path: "/recurring-payment" },
+        { text: "Mobile Payments", path: "/mobile-payments" },
+        { text: "Virtual Terminal", path: "/virtual-terminal" },
+        { text: "Online Payments", path: "/online-payment" },
+        { text: "B2B Payments", path: "/b2b-payments" },
+        
+      ]
     },
     { 
-      text: "About Us", 
-      path: "/about-us"
+      text: "Resources", 
+      submenu: [
+        { text: "Developer", path: "/developer" },
+        { text: "Partner", path: "/partner" },
+      ]
     },
     { 
-      text: "Contact Us", 
-      path: "/contact-us"
+      text: "Blogs", 
+      path: "/blogs"
     },
   ];
 
@@ -134,9 +160,9 @@ function MbOverlay({ isOpen, setIsOpen }) {
             <div className="flex-shrink-0 flex items-center justify-end p-3 border-b border-gray-100">
               <button
                 onClick={handleLinkClick}
-                className="mt-1 p-3 rounded-2xl bg-gradient-to-r from-gray-50 to-gray-100/50 hover:from-indigo-50 hover:to-purple-50/30 border border-gray-200/60 hover:border-indigo-200 transition-all duration-300 active:scale-95 mr-2"
+                className="mt-1 p-3 rounded-2xl bg-amber-500 hover:from-indigo-50 hover:to-purple-50/30 border border-gray-200/60 hover:border-indigo-200 transition-all duration-300 active:scale-95 mr-2"
               >
-                <X className="w-5 h-5 text-black" />
+                <X className="w-5 h-5 text-white" />
               </button>
             </div>
 
@@ -170,7 +196,7 @@ function MbOverlay({ isOpen, setIsOpen }) {
                                 onClick={handleLinkClick}
                                 className="block p-3 rounded-lg bg-orange-50 hover:bg-orange-100 border border-orange-100 hover:border-orange-200 transition-all duration-300 group w-full"
                               >
-                                <span className="text-gray-700 group-hover:text-indigo-700 font-medium text-sm whitespace-nowrap overflow-hidden text-ellipsis">
+                                <span className="text-black group-hover:text-orange-700 font-medium text-sm whitespace-nowrap overflow-hidden text-ellipsis">
                                   {subItem.text}
                                 </span>
                               </Link>

@@ -6,7 +6,7 @@ function CallCenterReadyToStart() {
 
         <div className='flex flex-col items-center gap-4 sm:gap-6 lg:gap-7 text-white text-center'>
 
-            <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold'>Ready <span className='text-[#F29200]'>To Get</span> Started?</h1>
+            <h1 className='text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold'>Ready <span className='text-[#F29200]'>To Get</span> Started?</h1>
             <p className='text-sm sm:text-base md:text-lg w-full max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl px-2 sm:px-4 md:px-0'>Low or high risk — we'll approve your call center merchant account. Join hundreds of call centers that trust us with their payment processing needs.</p>
             <button className='text-white bg-[#F29200] font-bold px-4 sm:px-5 py-3 rounded-xl hover:bg-white hover:text-[#F29200] cursor-pointer text-xs sm:text-sm md:text-base transition-colors duration-300'>Open Your Merchant Account</button>
             
