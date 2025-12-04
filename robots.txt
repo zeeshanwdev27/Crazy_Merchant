@@ -1,0 +1,9 @@
+# robots.txt for Crazy Merchants
+User-agent: *
+Disallow: /node_modules/
+Disallow: /dist/
+Disallow: /build/
+Allow: /
+
+# Sitemap location
+Sitemap: https://crazymerchants.com/sitemap.xml
