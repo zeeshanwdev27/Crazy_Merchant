@@ -1,6 +1,7 @@
 import React from 'react'
 import { ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Swal from "sweetalert2";
 
 function Footer() {
   return (
@@ -15,17 +16,65 @@ function Footer() {
               Let's <span className='text-[#F29200]'>TALK</span> <br /> TOGETHER
             </h1>
             
-            <form action="">
+            <form 
+            onSubmit={async (e) => {
+                          e.preventDefault();
+                          const formData = new FormData(e.target);
+                          try {
+                            const response = await fetch("https://crazymerchants.com/sendmail.php", {
+                              method: "POST",
+                              body: formData,
+                            });
+                            const result = await response.text();
+                            if (result.includes("success")) {
+                              Swal.fire({
+                                icon: "success",
+                                title: "Email Sent!",
+                                text: "🎉 Thank you! Email sent successfully.",
+                                confirmButtonColor: "#f59e0b",
+                              });
+                              e.target.reset();
+                            } else if (result.includes("invalid_email")) {
+                              Swal.fire({
+                                icon: "warning",
+                                title: "Invalid Email",
+                                text: "⚠️ Please enter a valid email address.",
+                                confirmButtonColor: "#f59e0b",
+                              });
+                            } else {
+                              Swal.fire({
+                                icon: "error",
+                                title: "Oops...",
+                                text: "❌ Something went wrong. Please try again later.",
+                                confirmButtonColor: "#f59e0b",
+                              });
+                            }
+                          } catch (error) {
+                            Swal.fire({
+                              icon: "error",
+                              title: "Network Error",
+                              text: "🚨 Please check your connection and try again.",
+                              confirmButtonColor: "#f59e0b",
+                            });
+                            console.error(error);
+                          }
+                          e.target.reset();
+                        }}
+            >
               <div className='flex gap-5 border-b items-center'>
                 <input 
                   type="email" 
                   placeholder='Enter Your Email' 
                   name="email" 
                   className='text-xl sm:text-2xl lg:text-5xl py-4 sm:py-5 lg:py-7 outline-none w-full max-w-full lg:max-w-lg' 
+                  required
                 />
+                <button type="submit">
                 <ArrowUpRight className="w-12 h-12 sm:w-14 sm:h-14 lg:w-18 lg:h-18 opacity-50 hover:text-[#F29200] hover:opacity-100 cursor-pointer" strokeWidth={1} />  
+                </button>
               </div>
             </form>
+
           </div>
 
           {/* Body */}

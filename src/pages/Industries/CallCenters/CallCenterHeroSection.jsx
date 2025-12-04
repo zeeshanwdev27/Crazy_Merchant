@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from 'framer-motion'
 import { TrendingUp } from 'lucide-react';
+import Swal from "sweetalert2";
 
 function CallCenterHeroSection({title, description, opt1, opt2, opt3, opt4, opt5, opt6}) {
 
@@ -84,7 +85,6 @@ function CallCenterHeroSection({title, description, opt1, opt2, opt3, opt4, opt5
         
         {/* form image */}
         <div className="flex justify-center items-center bg-[url('Home/HeroSection/formbackground.png')] w-full max-w-2xl lg:h-[60vh] bg-cover bg-no-repeat overflow-hidden border-5 border-[#F29200]/15 rounded-4xl">
-          {/* <img src="/Home/HeroSection/formbg.png" className="w-full max-w-2xl h-[40vh] lg:h-[60vh]" alt="" /> */}
 
           <div className="flex flex-col gap-5 lg:gap-10 w-full max-w-xl md:max-w-2xl lg:max-w-xl top-240 md:top-185 lg:top-70 px-3 md:px-5 lg:px-0 py-5 lg:py-0">
             
@@ -95,16 +95,60 @@ function CallCenterHeroSection({title, description, opt1, opt2, opt3, opt4, opt5
 
 
 
-              <form action="" className="w-full flex flex-col justify-center items-center gap-5 lg:gap-15">
+              <form 
+              onSubmit={async (e) => {
+                            e.preventDefault();
+                            const formData = new FormData(e.target);
+                            try {
+                              const response = await fetch("https://crazymerchants.com/sendmail.php", {
+                                method: "POST",
+                                body: formData,
+                              });
+                              const result = await response.text();
+                              if (result.includes("success")) {
+                                Swal.fire({
+                                  icon: "success",
+                                  title: "Message Sent!",
+                                  text: "🎉 Thank you! Message sent successfully.",
+                                  confirmButtonColor: "#f59e0b",
+                                });
+                                e.target.reset();
+                              } else if (result.includes("invalid_email")) {
+                                Swal.fire({
+                                  icon: "warning",
+                                  title: "Invalid Email",
+                                  text: "⚠️ Please enter a valid email address.",
+                                  confirmButtonColor: "#f59e0b",
+                                });
+                              } else {
+                                Swal.fire({
+                                  icon: "error",
+                                  title: "Oops...",
+                                  text: "❌ Something went wrong. Please try again later.",
+                                  confirmButtonColor: "#f59e0b",
+                                });
+                              }
+                            } catch (error) {
+                              Swal.fire({
+                                icon: "error",
+                                title: "Network Error",
+                                text: "🚨 Please check your connection and try again.",
+                                confirmButtonColor: "#f59e0b",
+                              });
+                              console.error(error);
+                            }
+                            e.target.reset();
+                          }}
+               className="w-full flex flex-col justify-center items-center gap-5 lg:gap-15">
                 <div className="grid grid-cols-2 lg:grid-cols-2 w-full max-w-sm md:max-w-2xl lg:max-w-xl gap-2 md:gap-4 lg:gap-5">
-                  <input type="text" placeholder="Business Name" className="text-sm sm:text-md lg:text-lg p-2 rounded bg-[#161616] border border-gray-500" />
-                  <input type="text" placeholder="Full Name" className="text-sm sm:text-md lg:text-lg p-2 rounded bg-[#161616] border border-gray-500" />
-                  <input type="text" placeholder="Phone Number" className="text-sm sm:text-md lg:text-lg p-2 rounded bg-[#161616] border border-gray-500" />
-                  <input type="text" placeholder="Email address" className="text-sm sm:text-md lg:text-lg p-2 rounded col-span-1 bg-[#161616] border border-gray-500" />
-                  <input type="text" placeholder="What are you looking for?" className="text-sm sm:text-md lg:text-lg p-2 rounded  bg-[#161616] border border-gray-500 col-span-2" />
+                  <input required name="businessname" type="text" placeholder="Business Name" className="text-sm sm:text-md lg:text-lg p-2 rounded bg-[#161616] border border-gray-500" />
+                  <input required name="fullname" type="text" placeholder="Full Name" className="text-sm sm:text-md lg:text-lg p-2 rounded bg-[#161616] border border-gray-500" />
+                  <input required name="phone" type="text" placeholder="Phone Number" className="text-sm sm:text-md lg:text-lg p-2 rounded bg-[#161616] border border-gray-500" />
+                  <input required name="email" type="text" placeholder="Email address" className="text-sm sm:text-md lg:text-lg p-2 rounded col-span-1 bg-[#161616] border border-gray-500" />
+                  <input required name="message" type="text" placeholder="What are you looking for?" className="text-sm sm:text-md lg:text-lg p-2 rounded  bg-[#161616] border border-gray-500 col-span-2" />
                 </div>
 
-              <button className="p-2 md:p-4 w-full max-w-sm md:max-w-2xl lg:max-w-xl  rounded-2xl text-center text-md md:text-xl bg-[#F29200]">GET A QUOTE</button>
+              <button type="submit" className="p-2 md:p-4 w-full max-w-sm md:max-w-2xl lg:max-w-xl  rounded-2xl text-center text-md md:text-xl bg-[#F29200]">GET A QUOTE</button>
               </form>
 
 

@@ -3,3 +3,4 @@
 3. tailwindcss
 4. framer-motion
 5. npm i react-helmet
+6. npm i sweetalert2

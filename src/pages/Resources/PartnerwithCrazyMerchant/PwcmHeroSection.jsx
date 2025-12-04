@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from 'framer-motion'
+import Swal from "sweetalert2";
 
 function PwcmHeroSection({title1, description}) {
 
@@ -50,16 +51,60 @@ function PwcmHeroSection({title1, description}) {
 
 
 
-              <form action="" className="w-full flex flex-col justify-center items-center gap-5 lg:gap-15 px-0">
+              <form 
+              onSubmit={async (e) => {
+              e.preventDefault();
+              const formData = new FormData(e.target);
+              try {
+                const response = await fetch("https://crazymerchants.com/sendmail.php", {
+                  method: "POST",
+                  body: formData,
+                });
+                const result = await response.text();
+                if (result.includes("success")) {
+                  Swal.fire({
+                    icon: "success",
+                    title: "Message Sent!",
+                    text: "🎉 Thank you! Message sent successfully.",
+                    confirmButtonColor: "#f59e0b",
+                  });
+                  e.target.reset();
+                } else if (result.includes("invalid_email")) {
+                  Swal.fire({
+                    icon: "warning",
+                    title: "Invalid Email",
+                    text: "⚠️ Please enter a valid email address.",
+                    confirmButtonColor: "#f59e0b",
+                  });
+                } else {
+                  Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "❌ Something went wrong. Please try again later.",
+                    confirmButtonColor: "#f59e0b",
+                  });
+                }
+              } catch (error) {
+                Swal.fire({
+                  icon: "error",
+                  title: "Network Error",
+                  text: "🚨 Please check your connection and try again.",
+                  confirmButtonColor: "#f59e0b",
+                });
+                console.error(error);
+              }
+              e.target.reset();
+            }}
+               className="w-full flex flex-col justify-center items-center gap-5 lg:gap-15 px-0">
                 <div className="grid grid-cols-2 lg:grid-cols-3 w-full max-w-sm md:max-w-2xl lg:max-w-5xl gap-2 lg:gap-5">
-                  <input type="text" placeholder="Business Name" className="p-2 rounded bg-[#161616] border border-gray-500" />
-                  <input type="text" placeholder="Full Name" className=" p-2 rounded bg-[#161616] border border-gray-500" />
-                  <input type="text" placeholder="Phone Number" className=" p-2 rounded bg-[#161616] border border-gray-500" />
-                  <input type="text" placeholder="Email address" className=" p-2 rounded col-span-1 bg-[#161616] border border-gray-500" />
-                  <input type="text" placeholder="What are you looking for?" className=" p-2 rounded  bg-[#161616] border border-gray-500 col-span-2" />
+                  <input required type="text" name="businessname" placeholder="Business Name" className="p-2 rounded bg-[#161616] border border-gray-500" />
+                  <input required type="text" name="fullname" placeholder="Full Name" className=" p-2 rounded bg-[#161616] border border-gray-500" />
+                  <input required type="text" name="phone" placeholder="Phone Number" className=" p-2 rounded bg-[#161616] border border-gray-500" />
+                  <input required type="text" name="email" placeholder="Email address" className=" p-2 rounded col-span-1 bg-[#161616] border border-gray-500" />
+                  <input required type="text" name="message" placeholder="What are you looking for?" className=" p-2 rounded  bg-[#161616] border border-gray-500 col-span-2" />
                 </div>
 
-              <button className="p-3 md:p-4 w-full max-w-sm md:max-w-2xl lg:max-w-xl  rounded-2xl text-center text-xl bg-[#F29200] cursor-pointer hover:bg-amber-600">GET A QUOTE</button>
+              <button type="submit" className="p-3 md:p-4 w-full max-w-sm md:max-w-2xl lg:max-w-xl  rounded-2xl text-center text-xl bg-[#F29200] cursor-pointer hover:bg-amber-600">GET A QUOTE</button>
               </form>
 
 
