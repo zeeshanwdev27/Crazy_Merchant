@@ -3,7 +3,6 @@ import { createBrowserRouter, createRoutesFromElements, Route } from "react-rout
 import Layout from "./Layout/Layout.jsx"
 
 const HomePage = React.lazy(()=> import('./pages/Home/HomePage.jsx'))
-const PartnerwithCrazyMerchant = React.lazy(()=> import('./pages/PartnerwithCrazyMerchant/PartnerwithCrazyMerchant.jsx'))
 const FAQs = React.lazy(()=> import('./pages/FAQs/FAQs.jsx'))
 const Blogs = React.lazy(()=> import('./pages/Blogs/Blogs.jsx'))
 
@@ -38,6 +37,9 @@ const Virtual_Terminal = React.lazy(()=> import('./pages/Solutions/Virtual_Termi
 const Online_Payment = React.lazy(()=> import('./pages/Solutions/Online_Payment/Online_Payment.jsx'))
 const B2B_Payments = React.lazy(()=> import('./pages/Solutions/B2B_Payments/B2B_Payments.jsx'))
 
+// Resources
+const PartnerwithCrazyMerchant = React.lazy(()=> import('./pages/Resources/PartnerwithCrazyMerchant/PartnerwithCrazyMerchant.jsx'))
+const Developer = React.lazy(()=> import('./pages/Resources/Developer/Developer.jsx'))
 
 // Blogs
 const Blog1 = React.lazy(()=> import('./pages/Blogs/Blog1.jsx'))
@@ -47,6 +49,7 @@ const App = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<Layout />}>
+
         <Route index element={<HomePage />} />
 
         {/* Industries Page */}
@@ -80,17 +83,18 @@ const App = createBrowserRouter(
         <Route path="/b2b-payments" element={<B2B_Payments />} />
 
 
-
-        
-
         {/* Resources Page */}
-        <Route path="/partnerwithcrazymerchant" element={<PartnerwithCrazyMerchant />} />
+        <Route path="/partner" element={<PartnerwithCrazyMerchant />} />
+        <Route path="/developer" element={<Developer />} />
 
-        <Route path="/faqs" element={<FAQs />} />
-        <Route path="/blogs" element={<Blogs />} />
-        
+
         {/* Blogs Sections */}
+        <Route path="/blogs" element={<Blogs />} />
         <Route path="/highriskmerchantblog" element={<Blog1 />} />
+
+
+        {/* FAQS Sections */}
+        <Route path="/faqs" element={<FAQs />} />
         
 
         

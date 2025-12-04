@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from 'framer-motion'
 
-function Home() {
+function PwcmHeroSection({title1, description}) {
 
       const imageLinks = [
         { title:"Travel Agencies \n Industry" , url: "/Home/HeroSection/img1.png" },
@@ -24,79 +24,21 @@ function Home() {
     <div className="relative pt-40 lg:pt-50 h-full text-white w-full flex flex-col justify-center items-start bg-[url('/Home/HeroSection/background.png')] bg-cover bg-no-repeat overflow-hidden">
       
       
-      <div className="flex flex-col gap-6 mx-auto w-full px-2 lg:px-0">
+      <div className="flex flex-col gap-8 mx-auto w-full px-2 lg:px-0 ">
         
-        <div className="relative flex flex-col text-center w-full max-w-5xl gap-5 lg:gap-8 mx-auto">
-        <h1 className="tracking-wider text-5xl md:text-6xl lg:text-8xl font-black [font-variation-settings:'wght'_1000] [-webkit-text-stroke:3px_white] [text-shadow:0_4px_12px_rgba(0,0,0,0.6)]">
-          THEY DECLINE
+        <div className="relative flex flex-col text-center w-full gap-5 lg:gap-3 max-w-4xl mx-auto">
+        <h1 className="leading-13 sm:leading-17 lg:leading-18 text-4xl md:text-6xl lg:text-6xl font-black [font-variation-settings:'wght'_1000] [-webkit-text-stroke:3px_white] [text-shadow:0_4px_12px_rgba(0,0,0,0.6)]">
+          {title1}
         </h1>
 
-        <p className="block xl:hidden tracking-wider text-5xl md:text-6xl font-black [font-variation-settings:'wght'_1000] [text-shadow:0_4px_12px_rgba(0,0,0,0.6)] [-webkit-text-stroke:2px] text-amber-500">
-          Merchant Website
-        </p>
-
-
-        {/* merchant float */}
-       <div className="hidden xl:block absolute top-1/2 -translate-y-1/2 bg-[#E0F4F2]/20 px-3 py-0.5 lg:py-2 rounded-full text-xs lg:text-sm font-medium shadow-xl left-10">
-       Merchant Website
-       </div>
-       {/* right float */}
-      <div className="hidden xl:block absolute top-32 -translate-y-1/2 rounded-full text-sm font-medium shadow-xl -right-4">
-        <img className="w-20 h-14 md:w-22 md:h-16 lg:w-35 lg:h-18" src="/Home/HeroSection/business.png" alt="business_img" />
-       </div>
-
-       {/* left float */}
-       <div className="hidden xl:block  absolute top-55 md:top-32 lg:top-48 -translate-y-1/2  rounded-full text-sm font-medium shadow-xl left-8">
-        <img className="w-22 h-13 md:w-24 md:h-15 lg:w-36 lg:h-18" src="/Home/HeroSection/finance.png" alt="finance_img" />
-       </div>
-
-        <h1 className="lg:pl-15 tracking-wider text-5xl md:text-6xl lg:text-8xl font-black [font-variation-settings:'wght'_1000] [-webkit-text-stroke:3px_white] [text-shadow:0_4px_12px_rgba(0,0,0,0.6)]">
-          WE APPROVE
-        </h1>
         </div>
 
-        <p className="tracking-wider text-xl font-bold text-center">
-          Best Solution for Travel and Call Center Businesses.
+        <p className="tracking-wider text-lg lg:text-xl font-bold text-center px-3 lg:px-0 max-w-5xl mx-auto">
+          {description}
         </p>
-
-        <div className="flex gap-5 justify-center items-center">
-          <div className="flex justify-center items-center -space-x-4">
-            {/* Left Img */}
-            <div className="relative w-12 h-12 rounded-full border-4 border-white shadow-xl ring-4 ring-gray-900/50">
-              <img
-                src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=400&h=400"
-                alt="Person 1"
-                className="w-full h-full rounded-full object-cover"
-              />
-            </div>
-
-            {/* Mid Img */}
-            <div className="relative z-10 w-12 h-12 rounded-full border-4 border-white shadow-2xl ring-4 ring-gray-900/50">
-              <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&h=400"
-                alt="Person 2"
-                className="w-full h-full rounded-full object-cover"
-              />
-            </div>
-
-            {/* Right Img */}
-            <div className="relative w-12 h-12 rounded-full border-4 border-white shadow-xl ring-4 ring-gray-900/50">
-              <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&h=400"
-                alt="Person 3"
-                className="w-full h-full rounded-full object-cover"
-              />
-            </div>
-          </div>
-
-          <div className="flex flex-col justify-start text-start">
-            <p className="font-bold">450+</p>
-            <p className="text-base tracking-wide">User in 2025</p>
-          </div>
-        </div>
 
         {/* form image */}
-          <div className="mt-10 lg:mt-0 mx-auto flex justify-center items-center bg-[url('Home/HeroSection/formbackground.png')] w-full max-w-5xl lg:h-[55vh] bg-cover bg-no-repeat overflow-hidden border-5 border-[#F29200]/15 rounded-4xl">
+          <div className="mt-10 lg:mt-0 mx-auto flex justify-center items-center bg-[url('Home/HeroSection/formbackground.png')] w-full max-w-5xl lg:h-[60vh] bg-cover bg-no-repeat overflow-hidden border-5 border-[#F29200]/15 rounded-4xl">
           {/* <img src="/Home/HeroSection/formbg.png" className="w-full max-w-2xl h-[40vh] lg:h-[60vh]" alt="" /> */}
 
           <div className="flex flex-col gap-5 lg:gap-10 w-full max-w-xl md:max-w-2xl lg:max-w-4xl top-240 md:top-185 lg:top-70 px-3 md:px-5 lg:px-0 py-5 lg:py-0">
@@ -183,4 +125,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default PwcmHeroSection;

@@ -3,7 +3,7 @@ import { ArrowUpRight } from 'lucide-react';
 
 function LowRiskIndustries() {
   return (
-    <div className="bg-[url('/Home/LowRiskIndustries/background.png')] bg-center lg:bg-top lg:bg-cover bg-no-repeat overflow-hidden h-screen lg:h-[85vh] py-10 lg:py-30 px-5 md:px-20 lg:px-40 mx-auto">
+    <div className="bg-[url('/Home/LowRiskIndustries/background.png')] bg-center lg:bg-top lg:bg-cover bg-no-repeat overflow-hidden h-full lg:h-[85vh] py-10 lg:py-30 px-5 md:px-20 lg:px-40 mx-auto">
 
         <div className='flex flex-col lg:flex-row gap-5 md:gap-20 lg:gap-80'>
 
@@ -13,12 +13,12 @@ function LowRiskIndustries() {
                 <h1 className='text-5xl lg:text-6xl font-bold text-white'>LOW <span className='text-[#F29200]'>RISK</span> <br /> <span className='text-[#F29200]'>INDUSTRIES</span> <br /> WE ACCEPT</h1>
                 <p className='text-md lg:text-sm w-full lg:max-w-lg text-gray-300'>Our comprehensive SaaS solutions are tailored to streamline your operations and drive maximum revenue for your business.</p>
                  
-            <div className='relative cursor-pointer group'>
+            <div className='relative cursor-pointer group w-full max-w-lg'>
                 <img src="Home/LowRiskIndustries/Rectangle.png" alt="Rectangle_bg" className='w-120' />
              
                 <h1 className='absolute left-10 top-3 text-4xl font-medium text-white'>Get Started <br /> Today!</h1>
 
-                <div className='absolute right-5 md:right-40 lg:right-15 bottom-5 p-3 rounded-full bg-amber-500 group-hover:bg-amber-600'>
+                <div className='absolute right-5 md:right-15 lg:right-15 bottom-5 p-3 rounded-full bg-amber-500 group-hover:bg-amber-600'>
                   <ArrowUpRight className='w-8 h-8 text-white'/>
                 </div>
              
@@ -67,11 +67,11 @@ function LowRiskIndustries() {
             
 
                         <div className='relative flex justify-center cursor-pointer group pt-5'>
-                          <img src="/Home/GetStarted/ViewIndustries.png" alt="ViewIndustries" className='w-60 h-30' />
+                          <img src="/Home/GetStarted/ViewIndustries.png" alt="ViewIndustries" className='w-40 md:w-50 lg:w-60 md:h-30' />
                          
-                            <h1 className='absolute left-10 top-8 text-2xl font-medium text-white'>View All <br /> Industries</h1>
+                            <h1 className='absolute top-10 md:left-20 md:top-10 lg:left-10 lg:top-8 text-xl md:text-2xl font-medium text-white'>View All <br /> Industries</h1>
             
-                            <div className='absolute right-10 bottom-7 p-1 rounded-full bg-amber-500 group-hover:bg-amber-600'>
+                            <div className='hidden lg:block absolute right-10 bottom-7 p-1 rounded-full bg-amber-500 group-hover:bg-amber-600'>
                               <ArrowUpRight className='w-7 h-7 text-white' strokeWidth={1.5}/>
                             </div>
                          

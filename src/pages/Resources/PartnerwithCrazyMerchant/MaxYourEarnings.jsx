@@ -5,7 +5,7 @@ import { Navigation, Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 
-function PaymentSolutions() {
+function MaxYourEarnings() {
 
     const [progress, setProgress] = useState(0);
     const swiperRef = useRef(null);
@@ -14,40 +14,33 @@ function PaymentSolutions() {
     const cardsData = [
         {
             url : '/Home/PaymentSolutions/pay.png',
-            title: 'High-Risk Payment Gateway',
-            description: 'Our high risk payment gateway makes high risk credit card processing safer and more secure with integrated fraud solutions to prevent chargebacks.',
-            lists : ['Advanced fraud prevention tools', 'Customized gateway solutions', 'Industry-specific configurations', 'Real-time transaction monitoring']
-        },
+            title: 'Identify Your Network',
+            description: 'Leverage your existing connections in business communities, professional associations, or industry groups. Your network is a goldmine for potential referrals, so start by identifying who might benefit from payment processing services.',        },
         {
             url : '/Home/PaymentSolutions/card.png',
-            title: 'Credit Card Chargebacks',
-            description: 'If you experience high levels of chargebacks or if your payment processor has dropped your account, you may need a high risk merchant account.',
-            lists : ['Advanced chargeback prevention', 'Real-time fraud detection', 'Automated dispute resolution', 'Risk monitoring dashboard']
+            title: 'Understand the Product',
+            description: 'Gain in-depth knowledge of Crazy Merchants’ payment processing solutions. The better you understand the products, the more effectively you can match them to potential clients’ needs, increasing your chances of successful referrals.',
         },
         {
             url : '/Home/PaymentSolutions/support.png',
-            title: 'High-Risk Merchant Account Provider',
-            description: 'The best high-risk merchant account provider by understanding the essential factors, features, and warning signs you should carefully look for.',
-            lists : ['Custom solutions for CBD businesses', 'Adult content payment processing', 'Credit repair merchant accounts', 'Tailored ecommerce solutions']
+            title: 'Provide Value',
+            description: 'Don’t just sell – solve problems. Listen to your contacts’ payment processing challenges and show how Crazy Merchants can address their specific needs. This approach builds trust and increases the likelihood of successful referrals.',
         },
         {
             url : '/Home/PaymentSolutions/pay.png',
-            title: 'High-Risk Payment Gateway',
-            description: 'Our high risk payment gateway makes high risk credit card processing safer and more secure with integrated fraud solutions to prevent chargebacks.',
-            lists : ['Advanced fraud prevention tools', 'Customized gateway solutions', 'Industry-specific configurations', 'Real-time transaction monitoring']
-        },
+            title: 'Identify Your Network',
+            description: 'Leverage your existing connections in business communities, professional associations, or industry groups. Your network is a goldmine for potential referrals, so start by identifying who might benefit from payment processing services.',        },
         {
             url : '/Home/PaymentSolutions/card.png',
-            title: 'Credit Card Chargebacks',
-            description: 'If you experience high levels of chargebacks or if your payment processor has dropped your account, you may need a high risk merchant account.',
-            lists : ['Advanced chargeback prevention', 'Real-time fraud detection', 'Automated dispute resolution', 'Risk monitoring dashboard']
+            title: 'Understand the Product',
+            description: 'Gain in-depth knowledge of Crazy Merchants’ payment processing solutions. The better you understand the products, the more effectively you can match them to potential clients’ needs, increasing your chances of successful referrals.',
         },
         {
             url : '/Home/PaymentSolutions/support.png',
-            title: 'High-Risk Merchant Account Provider',
-            description: 'The best high-risk merchant account provider by understanding the essential factors, features, and warning signs you should carefully look for.',
-            lists : ['Custom solutions for CBD businesses', 'Adult content payment processing', 'Credit repair merchant accounts', 'Tailored ecommerce solutions']
+            title: 'Provide Value',
+            description: 'Don’t just sell – solve problems. Listen to your contacts’ payment processing challenges and show how Crazy Merchants can address their specific needs. This approach builds trust and increases the likelihood of successful referrals.',
         },
+
     ]
 
     const handleSlideChange = (swiper) => {
@@ -85,9 +78,11 @@ function PaymentSolutions() {
             <div className='py-20 px-5 md:px-20 lg:px-40 flex flex-col gap-20'>
                 
                 <div className='flex flex-col lg:flex-row gap-5 lg:gap-0 justify-between'>
-                    <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold'>Comprehensive <br /> <span className='text-[#F29200]'>Payment</span> Solutions</h1>
+                    <h1 className='text-4xl md:text-5xl lg:text-6xl font-black w-full lg:max-w-4xl md:text-center lg:text-start'>Maximizing Your <span className='text-[#F29200]'>Earnings</span> as a Referral <span className='text-[#F29200]'>Partner</span></h1>
                     <div className='flex flex-col gap-5'>
-                        <p className='text-lg text-gray-700 font-bold flex items-center w-full lg:max-w-lg'>Secure, reliable, and tailored payment processing solutions for your high-risk business needs</p>
+                        <p className='text-sm sm:text-md font-medium lg:text-lg text-gray-700 lg:font-bold flex items-center w-full lg:max-w-lg md:text-center lg:text-start'>
+                            Follow these key strategies to succeed and boost your income as a Crazy Merchants referral partner
+                        </p>
                         <div className='flex gap-3 justify-end'>
                             <button className='prevBtn  p-2.5 rounded-full bg-[#F29200]'><ArrowLeft className='w-7 h-7 text-white'/></button>
                             <button className='nextBtn  p-2.5 rounded-full bg-black'><ArrowRight  className='w-7 h-7 text-white'/></button>
@@ -160,13 +155,13 @@ function PaymentSolutions() {
                                     <h1 className="text-2xl font-bold">{data.title}</h1>
 
                                     <p className="text-sm">{data.description}</p>
-
+{/* 
                                     <ul className="flex flex-col gap-1 text-sm list-disc pl-5">
                                         <li>{data.lists[0]}</li>
                                         <li>{data.lists[1]}</li>
                                         <li>{data.lists[2]}</li>
                                         <li>{data.lists[3]}</li>
-                                    </ul>
+                                    </ul> */}
                                 </div>
                             </SwiperSlide>
                         ))}
@@ -198,10 +193,35 @@ function PaymentSolutions() {
                     />
                 </div>
 
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 p-4 shadow-lg border-l-4 border-[#F29200] rounded-lg py-8 lg:py-10 px-6 lg:px-10'>
+
+                <div className='flex flex-col gap-5'>
+                    <h1 className='text-2xl sm:text-3xl font-semibold'>Need a Custom Solution?</h1>
+                    <p className='text-xs sm:text-sm max-w-xl'>Every call center is unique. Our team will work with you to create a customized payment processing solution that fits your specific business model, volume requirements, and growth goals.</p>
+                </div>
+
+                <div className='flex flex-col sm:flex-row gap-6 lg:gap-10'>
+                    <div className='text-center h-full w-full max-w-full sm:max-w-xs flex flex-col gap-4 border-3 border-[#F29200]/40 rounded-2xl bg-white shadow py-5 px-5 hover:bg-[#F29200] hover:text-white group'>
+                       <h1 className='text-[#F29200] text-xl sm:text-2xl group-hover:text-white font-bold'>48hr</h1>
+                       <p className='text-sm sm:text-md font-semibold'>Avg. Approval Time</p>
+                    </div>
+
+                    <div className='text-center h-full w-full max-w-full sm:max-w-xs flex flex-col gap-4 border-3 border-[#F29200]/40 rounded-2xl bg-white shadow py-5 px-5 hover:bg-[#F29200] hover:text-white group'>
+                       <h1 className='text-[#F29200] text-xl sm:text-2xl group-hover:text-white font-bold'>500+</h1>
+                       <p className='text-sm sm:text-md font-semibold'>Call Centers Served</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
             </div>
 
         </div>
     )
 }
 
-export default PaymentSolutions
+export default MaxYourEarnings

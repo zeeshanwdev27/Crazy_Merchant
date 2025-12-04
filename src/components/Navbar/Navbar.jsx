@@ -43,6 +43,12 @@ function Navbar() {
   ];
    const solutionsActive = solutionsPaths.some(path => location.pathname === path);
 
+  const ResourcesPaths = [
+    "/developer",
+    "/partner",
+  ];
+   const resourcesActive = ResourcesPaths.some(path => location.pathname === path);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -105,6 +111,7 @@ function Navbar() {
               : 'bg-[#F29200] text-white'
           }`}>
 
+            {/* Home */}
             <li>            
               <NavLink 
                 to="/" 
@@ -259,21 +266,35 @@ function Navbar() {
 
 
 
-            <li>            
+          {/* Resources */}
+            <li className="relative group">            
               <NavLink 
-                to="/resources" 
-                className={({ isActive }) => 
-                  isActive 
-                    ? `rounded-2xl py-2.5 px-2 text-light transition-all duration-300 ${
-                        isScrolled ? 'bg-black text-white' : 'bg-black text-white'
-                      }` 
-                    : "hover:opacity-80 transition-opacity duration-300"
-                }
-              >
-                Resources   
+              className={`flex items-center gap-2 rounded-2xl py-2 transition-all duration-300 ${
+                resourcesActive ? 'bg-black text-white px-2' : 'hover:opacity-80'
+                }`}
+                >
+                  Resources
+                <ChevronDown className='w-5 h-5'/>
               </NavLink>
+
+              {/* Submenu */}
+              <div className="absolute left-0 mt-0.5 hidden group-hover:grid bg-black text-white shadow-lg rounded-xl py-3 w-40 z-50 grid-cols-1 gap-2">
+                  
+                  <NavLink to="/developer" className={({ isActive }) => `block px-4 py-2 hover:text-amber-500 text-sm transition-all duration-100 ${isActive ? 'text-amber-500 ' : 'text-white'}`}>
+                     Developer
+                  </NavLink>
+
+                  <NavLink to="/partner" className={({ isActive }) => `block px-4 py-2 hover:text-amber-500 text-sm transition-all duration-100 ${isActive ? 'text-amber-500 ' : 'text-white'}`}>
+                     Partner
+                  </NavLink>
+
+              </div>
+
             </li>
 
+
+
+            {/* Blogs */}
             <li>            
               <NavLink 
                 to="/blogs" 

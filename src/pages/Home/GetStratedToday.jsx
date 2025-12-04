@@ -16,7 +16,7 @@ function GetStratedToday() {
 
         <div className='flex flex-col lg:flex-row gap-10 w-full'>
 
-            <div className='relative w-90 md:100 lg:w-170 lg:h-100 cursor-pointer group'>
+            <div className='relative w-full md:w-100 lg:w-170 lg:h-100 cursor-pointer group'>
                  <img  src="/Home/GetStarted/GetStarted.png" alt="GetStarted" />
              
                 <h1 className='absolute left-10 top-10 text-5xl lg:text-6xl text-white'>Get <br /> Started <br /> Today!</h1>
@@ -88,12 +88,12 @@ function GetStratedToday() {
 
             
             <div className='relative flex justify-center cursor-pointer group col-span-2 md:col-span-1'>
-              <img src="/Home/GetStarted/ViewIndustries.png" alt="ViewIndustries" className='w-80 h-40 lg:w-80 lg:h-50' />
+              <img src="/Home/GetStarted/ViewIndustries.png" alt="ViewIndustries" className='w-80 h-40 md:w-40 md:h-35 lg:w-80 lg:h-50' />
              
-                <h1 className='absolute left-15 md:left-5 lg:left-10 top-3 text-3xl md:text-2xl lg:text-4xl text-white'>View <br /> All Industries</h1>
+                <h1 className='absolute left-15 md:left-8 lg:left-10 top-3 md:top-5 lg:top-3 text-3xl md:text-xl lg:text-4xl text-white'>View <br /> All Industries</h1>
 
-                <div className='absolute right-12 lg:right-10 md:right-3 bottom-5 p-3 rounded-full bg-amber-500 group-hover:bg-amber-600'>
-                  <ArrowUpRight className='w-8 h-8 text-white'/>
+                <div className=' absolute  right-12 lg:right-10 md:right-7 bottom-5 md:bottom-7 lg:bottom-5 p-3 rounded-full bg-amber-500 group-hover:bg-amber-600'>
+                  <ArrowUpRight className='w-8 h-8 md:w-5 md:h-5 lg:w-8 lg:h-8 text-white'/>
                 </div>
              
             </div>
