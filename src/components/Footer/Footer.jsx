@@ -89,7 +89,7 @@ function Footer() {
                 <h1 className='text-[#F29200] text-2xl sm:text-3xl font-bold'>Social media</h1>
 
               <div className='grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-5'>
-                <a href='https://www.instagram.com/crazymerchants/' className='flex gap-1 items-center hover:text-[#F29200] cursor-pointer'> 
+                <a href='https://www.instagram.com/crazymerchants1?igsh=MXIxb2sxNmhqOHA0Mw==' className='flex gap-1 items-center hover:text-[#F29200] cursor-pointer'> 
                   <span className='text-base sm:text-lg'>Instagram</span>
                   <ArrowUpRight className='w-4 h-4 sm:w-5 sm:h-5' strokeWidth={1}/>
                 </a>

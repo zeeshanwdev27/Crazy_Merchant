@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from 'framer-motion'
 import Swal from "sweetalert2";
+import { Spotlight } from "../../components/ui/spotlight";
 
 function Home() {
 
@@ -22,34 +23,41 @@ function Home() {
     <>
 
     {/* Section 1 */}
-    <div className="relative pt-40 lg:pt-50 h-full text-white w-full flex flex-col justify-center items-start bg-[url('/Home/HeroSection/background.png')] bg-cover bg-no-repeat overflow-hidden">
+    <div className="relative pt-40 lg:pt-50 h-full text-white w-full flex flex-col justify-center items-start bg-[url('/Home/HeroSection/background1.png')] bg-cover bg-no-repeat overflow-hidden">
       
+      <Spotlight
+        className="-top-20! left-10! md:-top-20 md:left-60"
+        fill="white"
+      />
       
-      <div className="flex flex-col gap-6 mx-auto w-full px-2 lg:px-0">
+      <div className="z-10 flex flex-col gap-6 mx-auto w-full px-2 lg:px-0">
         
         <div className="relative flex flex-col text-center w-full max-w-5xl gap-5 lg:gap-8 mx-auto">
         <h1 className="tracking-wider text-5xl md:text-6xl lg:text-8xl font-black [font-variation-settings:'wght'_1000] [-webkit-text-stroke:3px_white] [text-shadow:0_4px_12px_rgba(0,0,0,0.6)]">
           THEY DECLINE
         </h1>
 
-        <p className="block xl:hidden tracking-wider text-5xl md:text-6xl font-black [font-variation-settings:'wght'_1000] [text-shadow:0_4px_12px_rgba(0,0,0,0.6)] [-webkit-text-stroke:2px] text-amber-500">
+        {/* <p className="block xl:hidden tracking-wider text-5xl md:text-6xl font-black [font-variation-settings:'wght'_1000] [text-shadow:0_4px_12px_rgba(0,0,0,0.6)] [-webkit-text-stroke:2px] text-amber-500">
           Merchant Website
-        </p>
+        </p> */}
 
 
         {/* merchant float */}
-       <div className="hidden xl:block absolute top-1/2 -translate-y-1/2 bg-[#E0F4F2]/20 px-3 py-0.5 lg:py-2 rounded-full text-xs lg:text-sm font-medium shadow-xl left-10">
+       {/* <div className="hidden xl:block absolute top-1/2 -translate-y-1/2 bg-[#E0F4F2]/20 px-3 py-0.5 lg:py-2 rounded-full text-xs lg:text-sm font-medium shadow-xl left-10">
        Merchant Website
-       </div>
+       </div> */}
+
+
        {/* right float */}
-      <div className="hidden xl:block absolute top-32 -translate-y-1/2 rounded-full text-sm font-medium shadow-xl -right-4">
+      {/* <div className="hidden xl:block absolute top-32 -translate-y-1/2 rounded-full text-sm font-medium shadow-xl -right-4">
         <img className="w-20 h-14 md:w-22 md:h-16 lg:w-35 lg:h-18" src="/Home/HeroSection/business.png" alt="business_img" />
-       </div>
+       </div> */}
+
 
        {/* left float */}
-       <div className="hidden xl:block  absolute top-55 md:top-32 lg:top-48 -translate-y-1/2  rounded-full text-sm font-medium shadow-xl left-8">
+       {/* <div className="hidden xl:block  absolute top-55 md:top-32 lg:top-48 -translate-y-1/2  rounded-full text-sm font-medium shadow-xl left-8">
         <img className="w-22 h-13 md:w-24 md:h-15 lg:w-36 lg:h-18" src="/Home/HeroSection/finance.png" alt="finance_img" />
-       </div>
+       </div> */}
 
         <h1 className="lg:pl-15 tracking-wider text-5xl md:text-6xl lg:text-8xl font-black [font-variation-settings:'wght'_1000] [-webkit-text-stroke:3px_white] [text-shadow:0_4px_12px_rgba(0,0,0,0.6)]">
           WE APPROVE
@@ -172,7 +180,7 @@ function Home() {
 
 
       {/* Section 2 */}
-     <div className="bottom-0 left-0 w-full top-[156%] md:top-[102%] lg:top-[0%] lg:flex justify-center overflow-hidden">
+     <div className="z-10 bottom-0 left-0 w-full top-[156%] md:top-[102%] lg:top-[0%] lg:flex justify-center overflow-hidden">
     <div className="bg-[url('/Home/HeroSection/bottombg.png')]  w-full bg-cover bg-no-repeat py-20 px-10 overflow-hidden">
         <motion.div
             className='flex justify-center items-center'
