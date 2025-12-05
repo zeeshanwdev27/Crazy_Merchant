@@ -39,7 +39,8 @@ function PwcmHeroSection({title1, description}) {
         </p>
 
         {/* form image */}
-          <div className="mt-10 lg:mt-0 mx-auto flex justify-center items-center bg-[url('Home/HeroSection/formbackground.png')] w-full max-w-5xl lg:h-[60vh] bg-cover bg-no-repeat overflow-hidden border-5 border-[#F29200]/15 rounded-4xl">
+          <div className="mt-10 lg:mt-0 mx-auto flex justify-center items-center w-full max-w-5xl lg:h-[60vh] bg-cover bg-no-repeat overflow-hidden border-5 border-[#F29200]/15 rounded-4xl"
+          style={{ backgroundImage: `url(/Home/HeroSection/formbackground.png)` }}>
           {/* <img src="/Home/HeroSection/formbg.png" className="w-full max-w-2xl h-[40vh] lg:h-[60vh]" alt="" /> */}
 
           <div className="flex flex-col gap-5 lg:gap-10 w-full max-w-xl md:max-w-2xl lg:max-w-4xl top-240 md:top-185 lg:top-70 px-3 md:px-5 lg:px-0 py-5 lg:py-0">
