@@ -17,7 +17,11 @@ function GetStratedToday() {
 
         <div className='flex flex-col lg:flex-row gap-10 w-full'>
 
-            <div className='relative w-full md:w-100 lg:w-170 lg:h-100 cursor-pointer group'>
+            <div className='relative w-full md:w-100 lg:w-170 lg:h-100 cursor-pointer group'   onClick={() => {
+    if (window.LiveChatWidget) {
+      window.LiveChatWidget.call("maximize");
+    }
+  }}>
                  <img  src="/Home/GetStarted/GetStarted.png" alt="GetStarted" />
              
                 <h1 className='absolute left-10 top-10 text-5xl lg:text-6xl text-white'>Get <br /> Started <br /> Today!</h1>

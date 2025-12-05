@@ -13,7 +13,11 @@ function LowRiskIndustries() {
                 <h1 className='text-5xl lg:text-6xl font-bold text-white'>LOW <span className='text-[#F29200]'>RISK</span> <br /> <span className='text-[#F29200]'>INDUSTRIES</span> <br /> WE ACCEPT</h1>
                 <p className='text-md lg:text-sm w-full lg:max-w-lg text-gray-300'>Our comprehensive SaaS solutions are tailored to streamline your operations and drive maximum revenue for your business.</p>
                  
-            <div className='relative cursor-pointer group w-full max-w-lg'>
+            <div className='relative cursor-pointer group w-full max-w-lg'   onClick={() => {
+    if (window.LiveChatWidget) {
+      window.LiveChatWidget.call("maximize");
+    }
+  }}>
                 <img src="Home/LowRiskIndustries/Rectangle.png" alt="Rectangle_bg" className='w-120' />
              
                 <h1 className='absolute left-10 top-3 text-4xl font-medium text-white'>Get Started <br /> Today!</h1>

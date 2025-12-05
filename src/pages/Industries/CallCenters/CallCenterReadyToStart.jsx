@@ -8,7 +8,14 @@ function CallCenterReadyToStart() {
 
             <h1 className='text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold'>Ready <span className='text-[#F29200]'>To Get</span> Started?</h1>
             <p className='text-sm sm:text-base md:text-lg w-full max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl px-2 sm:px-4 md:px-0'>Low or high risk — we'll approve your call center merchant account. Join hundreds of call centers that trust us with their payment processing needs.</p>
-            <button className='text-white bg-[#F29200] font-bold px-4 sm:px-5 py-3 rounded-xl hover:bg-white hover:text-[#F29200] cursor-pointer text-xs sm:text-sm md:text-base transition-colors duration-300'>Open Your Merchant Account</button>
+            <button onClick={() => {
+              if (window.LiveChatWidget) {
+                window.LiveChatWidget.call("maximize");
+              }
+              }} 
+              className='text-white bg-[#F29200] font-bold px-4 sm:px-5 py-3 rounded-xl hover:bg-white hover:text-[#F29200] cursor-pointer text-xs sm:text-sm md:text-base transition-colors duration-300'
+              >Open Your Merchant Account
+            </button>
             
             <ul className="mt-5 list-disc flex flex-col sm:flex-row flex-wrap justify-center gap-2 sm:gap-4 md:gap-6 lg:gap-8 pl-4 sm:pl-0 space-y-1 sm:space-y-0  text-xs sm:text-sm md:text-base font-semibold text-[#F29200] text-left sm:text-center">
               <li className="sm:list-none">No Setup Fees</li>

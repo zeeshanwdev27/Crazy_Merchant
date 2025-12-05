@@ -50,6 +50,31 @@ function Navbar() {
    const resourcesActive = ResourcesPaths.some(path => location.pathname === path);
 
 
+  // Widget Hdden on Overlay
+      useEffect(() => {
+      const handleLiveChatVisibility = () => {
+        // Check if LiveChatWidget is available
+        if (typeof window.LiveChatWidget === 'undefined') {
+          console.log('LiveChatWidget not loaded yet');
+          return;
+        }
+    
+        if (isMenuOpen) {
+          // When overlay opens, hide the widget
+          window.LiveChatWidget.call("hide"); 
+        } else {
+          // When overlay closes, show the widget
+          window.LiveChatWidget.call("minimize"); 
+        }
+      };
+    
+      // Add a small delay to ensure the widget is ready
+      const timer = setTimeout(handleLiveChatVisibility, 100);
+      
+      return () => clearTimeout(timer);
+    }, [isMenuOpen]);
+
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -327,7 +352,13 @@ function Navbar() {
               888-651-9042
             </Link>
 
-            <button className={`p-2 px-5 rounded-xl text-white cursor-pointer transition-all duration-300 ${
+            <button 
+              onClick={() => {
+    if (window.LiveChatWidget) {
+      window.LiveChatWidget.call("maximize");
+    }
+  }}
+            className={`p-2 px-5 rounded-xl text-white cursor-pointer transition-all duration-300 ${
               isScrolled 
                 ? 'bg-[#F29200] hover:bg-amber-600' 
                 : 'bg-[#F29200] hover:bg-amber-600'
