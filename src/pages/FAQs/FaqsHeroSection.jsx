@@ -77,20 +77,20 @@ const handleSearchSubmit = (e) => {
   <h3 className="text-sm sm:text-md font-medium">Common searches:</h3>
 
   <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-5">
-    <div onClick={()=> navigate(`/faqs?search=dedicated`)} className="py-2 px-3 sm:py-2.5 sm:px-3 md:py-3 md:px-3 rounded-xl sm:rounded-2xl bg-[#FF6900]/20 text-[#F29200] hover:bg-[#EAEAEA]/5 cursor-pointer">
-      <p className="text-xs sm:text-sm md:text-md font-medium">Dedicated Support</p>
+    <div onClick={()=> navigate(`/faqs?search=merchant`)} className="py-2 px-3 sm:py-2.5 sm:px-3 md:py-3 md:px-3 rounded-xl sm:rounded-2xl bg-[#FF6900]/20 text-[#F29200] hover:bg-[#EAEAEA]/5 cursor-pointer">
+      <p className="text-xs sm:text-sm md:text-md font-medium">Merchant Services</p>
     </div>
 
-    <div className="py-2 px-3 sm:py-2.5 sm:px-3 md:py-3 md:px-3 rounded-xl sm:rounded-2xl bg-[#FF6900]/20 text-[#F29200] hover:bg-[#EAEAEA]/5 cursor-pointer">
-      <p className="text-xs sm:text-sm md:text-md font-medium">How to use</p>
+    <div onClick={()=> navigate(`/faqs?search=mobile`)} className="py-2 px-3 sm:py-2.5 sm:px-3 md:py-3 md:px-3 rounded-xl sm:rounded-2xl bg-[#FF6900]/20 text-[#F29200] hover:bg-[#EAEAEA]/5 cursor-pointer">
+      <p className="text-xs sm:text-sm md:text-md font-medium">Mobile Payments</p>
     </div>
 
-    <div className="py-2 px-3 sm:py-2.5 sm:px-3 md:py-3 md:px-3 rounded-xl sm:rounded-2xl bg-[#FF6900]/20 text-[#F29200] hover:bg-[#EAEAEA]/5 cursor-pointer">
-      <p className="text-xs sm:text-sm md:text-md font-medium">Integration</p>
+    <div onClick={()=> navigate(`/faqs?search=call`)} className="py-2 px-3 sm:py-2.5 sm:px-3 md:py-3 md:px-3 rounded-xl sm:rounded-2xl bg-[#FF6900]/20 text-[#F29200] hover:bg-[#EAEAEA]/5 cursor-pointer">
+      <p className="text-xs sm:text-sm md:text-md font-medium">Call Centers</p>
     </div>
 
-    <div className="py-2 px-3 sm:py-2.5 sm:px-3 md:py-3 md:px-3 rounded-xl sm:rounded-2xl bg-[#FF6900]/20 text-[#F29200] hover:bg-[#EAEAEA]/5 cursor-pointer">
-      <p className="text-xs sm:text-sm md:text-md font-medium">Privacy</p>
+    <div onClick={()=> navigate(`/faqs?search=tech`)} className="py-2 px-3 sm:py-2.5 sm:px-3 md:py-3 md:px-3 rounded-xl sm:rounded-2xl bg-[#FF6900]/20 text-[#F29200] hover:bg-[#EAEAEA]/5 cursor-pointer">
+      <p className="text-xs sm:text-sm md:text-md font-medium">Tech Support</p>
     </div>
   </div>
 </div>
