@@ -17,22 +17,22 @@ function BlogsSections() {
         },
         {
             image: 'Blogs/blog2.png',
-            blogLink : '#',
+            blogLink : '/vapeshopsolutionsblog',
             title: 'Payment Processing Solutions for Vape Shops'
         },
         {
            image: 'Blogs/blog3.png',
-           blogLink : '#',
+           blogLink : '/highriskbusinessmistakesblog',
             title: 'Top 5 Mistakes High-Risk Businesses Make When Choosing a Payment Gateway'
         },
         {
             image: 'Blogs/blog4.png',
-            blogLink : '#',
+            blogLink : '/highriskeccomercepaymentblog',
             title: 'Top 10 High-Risk Payment Gateways for E-Commerce Businesses'
         },
         {
             image: 'Blogs/blog5.jpg',
-            blogLink : '#',
+            blogLink : '/crazymerchantsisbestchoiceblog',
             title: 'Why Crazy Merchants is the Best Choice for High-Risk Payment Processing'
         },
     ]

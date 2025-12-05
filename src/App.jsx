@@ -44,7 +44,11 @@ const PartnerwithCrazyMerchant = React.lazy(()=> import('./pages/Resources/Partn
 const Developer = React.lazy(()=> import('./pages/Resources/Developer/Developer.jsx'))
 
 // Blogs
-const Blog1 = React.lazy(()=> import('./pages/Blogs/Blog1.jsx'))
+const HighRiskMerchantBlog = React.lazy(()=> import('./pages/Blogs/HighRiskMerchantBlog.jsx'))
+const VapeShops = React.lazy(()=> import('./pages/Blogs/VapeShops.jsx'))
+const Highriskbusinessesmistakes = React.lazy(()=> import('./pages/Blogs/Highriskbusinessesmistakes.jsx'))
+const HighRiskEccomercepaymentgateways = React.lazy(()=> import('./pages/Blogs/HighRiskEccomercepaymentgateways.jsx'))
+const Crazymerchantsisbestchoice = React.lazy(()=> import('./pages/Blogs/Crazymerchantsisbestchoice.jsx'))
 
 
 const App = createBrowserRouter(
@@ -89,18 +93,21 @@ const App = createBrowserRouter(
         <Route path="/partner" element={<PartnerwithCrazyMerchant />} />
         <Route path="/developer" element={<Developer />} />
 
-
-        {/* Blogs Sections */}
-        <Route path="/blogs" element={<Blogs />} />
-        <Route path="/highriskmerchantblog" element={<Blog1 />} />
-
-
         {/* FAQS Sections */}
         <Route path="/faqs" element={<FAQs />} />
 
 
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfServices />} />
+
+
+        {/* Blogs Sections */}
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/highriskmerchantblog" element={<HighRiskMerchantBlog />} />
+        <Route path="/vapeshopsolutionsblog" element={<VapeShops />} />
+        <Route path="/highriskbusinessmistakesblog" element={<Highriskbusinessesmistakes />} />
+        <Route path="/highriskeccomercepaymentblog" element={<HighRiskEccomercepaymentgateways />} />
+        <Route path="/crazymerchantsisbestchoiceblog" element={<Crazymerchantsisbestchoice />} />
         
 
         

@@ -28,7 +28,7 @@ function PaymentSolutions() {
             url : '/Home/PaymentSolutions/support.png',
             title: 'High-Risk Merchant Account Provider',
             description: 'The best high-risk merchant account provider by understanding the essential factors, features, and warning signs you should carefully look for.',
-            lists : ['Custom solutions for CBD businesses', 'Adult content payment processing', 'Credit repair merchant accounts', 'Tailored ecommerce solutions']
+            lists : ['Custom solutions for travel agencies and tour operators', 'Payment processing for tech support and IT services', 'Credit repair merchant accounts', 'Tailored ecommerce solutions']
         },
         {
             url : '/Home/PaymentSolutions/pay.png',
