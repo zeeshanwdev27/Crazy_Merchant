@@ -34,7 +34,7 @@ function Home() {
         
         <div className="relative flex flex-col text-center w-full max-w-5xl gap-5 lg:gap-8 mx-auto">
         <h1 className="tracking-wider text-5xl md:text-6xl lg:text-8xl font-black [font-variation-settings:'wght'_1000] [-webkit-text-stroke:3px_white] [text-shadow:0_4px_12px_rgba(0,0,0,0.6)]">
-          THEY DECLINE
+          THEY DECLINE,
         </h1>
 
         {/* <p className="block xl:hidden tracking-wider text-5xl md:text-6xl font-black [font-variation-settings:'wght'_1000] [text-shadow:0_4px_12px_rgba(0,0,0,0.6)] [-webkit-text-stroke:2px] text-amber-500">
@@ -60,7 +60,7 @@ function Home() {
        </div> */}
 
         <h1 className="lg:pl-15 tracking-wider text-5xl md:text-6xl lg:text-8xl font-black [font-variation-settings:'wght'_1000] [-webkit-text-stroke:3px_white] [text-shadow:0_4px_12px_rgba(0,0,0,0.6)]">
-          WE APPROVE
+          WE APPROVE.
         </h1>
         </div>
 

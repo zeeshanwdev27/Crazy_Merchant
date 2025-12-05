@@ -1,82 +1,70 @@
 <?php
-// Allow CORS
-header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Origin: https://crazymerchants.com");
+header("Access-Control-Allow-Methods: POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
-header("Access-Control-Allow-Methods: POST");
-header("Content-Type: text/plain");
-
-// Ensure request is POST
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    echo "error";
+ 
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
     exit;
 }
-
-// Sanitize input
-function clean_input($data) {
-    return htmlspecialchars(strip_tags(trim($data)));
+ 
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    echo "invalid_method";
+    exit;
 }
-
-// Receive fields
-$businessname = isset($_POST['businessname']) ? clean_input($_POST['businessname']) : "";
-$fullname     = isset($_POST['fullname']) ? clean_input($_POST['fullname']) : "";
-$phone        = isset($_POST['phone']) ? clean_input($_POST['phone']) : "";
-$email        = isset($_POST['email']) ? clean_input($_POST['email']) : "";
-$message      = isset($_POST['message']) ? clean_input($_POST['message']) : "";
-
-// Validate email
-if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+ 
+// Common field
+$email = isset($_POST['email']) ? trim($_POST['email']) : "";
+ 
+// Email validation
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     echo "invalid_email";
     exit;
 }
-
-/*
-------------------------------------------------------
- Detect which form was submitted
-------------------------------------------------------
-*/
-
-// Footer form (email only)
-$is_footer_form = empty($businessname) && empty($fullname) && empty($phone) && empty($message);
-
-// Big form
-$is_full_form = !empty($businessname) && !empty($fullname) && !empty($phone) && !empty($message);
-
-// If neither is valid → error
-if (!$is_footer_form && !$is_full_form) {
-    echo "error";
+ 
+// Check whether it is FOOTER FORM or FULL CONTACT FORM
+$businessname = $_POST['businessname'] ?? "";
+$fullname     = $_POST['fullname'] ?? "";
+$phone        = $_POST['phone'] ?? "";
+$message      = $_POST['message'] ?? "";
+ 
+$to = "leads@crazymerchants.com";
+$headers  = "From: Crazy Merchants <leads@crazymerchants.com>\r\n";
+$headers .= "Reply-To: $email\r\n";
+$headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
+ 
+// -------------------------
+// CASE 1: FOOTER FORM ONLY 
+// -------------------------
+if ($fullname === "" && $phone === "" && $businessname === "" && $message === "") {
+ 
+    $subject = "New Footer Lead - CrazyMerchants.com";
+    $body  = "A new email subscription came from the footer form:\n\n";
+    $body .= "Email: $email\n";
+ 
+    if (mail($to, $subject, $body, $headers)) {
+        echo "success";
+    } else {
+        echo "error";
+    }
     exit;
 }
-
-// Email Receiver
-$to = "leads@crazymerchants.com";
-$subject = $is_footer_form 
-    ? "New Email Subscription – CrazyMerchants.com"
-    : "New Lead From CrazyMerchants.com Website";
-
-// Email Body
-$body = "";
-
-if ($is_footer_form) {
-    $body .= "New email subscription received:\n\n";
-    $body .= "Email: $email\n\n";
-} else {
-    $body .= "New Lead Submission:\n\n";
-    $body .= "Business Name: $businessname\n";
-    $body .= "Full Name: $fullname\n";
-    $body .= "Phone Number: $phone\n";
-    $body .= "Email: $email\n\n";
-    $body .= "Message:\n$message\n\n";
-}
-
-// Headers
-$headers  = "From: Crazy Merchants <no-reply@crazymerchants.com>\r\n";
-$headers .= "Reply-To: $email\r\n";
-$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-
-// Send Email
+ 
+// -------------------------
+// CASE 2: FULL CONTACT FORM
+// -------------------------
+ 
+$subject = "New Lead Submission - CrazyMerchants.com";
+ 
+$body  = "New Lead Submission:\n\n";
+$body .= "Business Name: $businessname\n";
+$body .= "Full Name: $fullname\n";
+$body .= "Phone Number: $phone\n";
+$body .= "Email: $email\n\n";
+$body .= "Message:\n$message\n\n";
+ 
 if (mail($to, $subject, $body, $headers)) {
     echo "success";
 } else {
     echo "error";
 }
-?>
