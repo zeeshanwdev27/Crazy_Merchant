@@ -1,7 +1,12 @@
 import React from 'react'
 import { ArrowUpRight } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
 
 function LowRiskIndustries() {
+
+  const navigate = useNavigate()
+
+
   return (
     <div className="bg-[url('/Home/LowRiskIndustries/background.png')] bg-center lg:bg-top lg:bg-cover bg-no-repeat overflow-hidden h-full lg:h-[85vh] py-10 lg:py-30 px-5 md:px-20 lg:px-40 mx-auto">
 
@@ -20,10 +25,10 @@ function LowRiskIndustries() {
   }}>
                 <img src="Home/LowRiskIndustries/Rectangle.png" alt="Rectangle_bg" className='w-120' />
              
-                <h1 className='absolute left-10 top-3 text-4xl font-medium text-white'>Get Started <br /> Today!</h1>
+                <h1 className='absolute left-10 top-3 text-2xl sm:text-4xl font-medium text-white'>Get Started <br /> Today!</h1>
 
                 <div className='absolute right-5 md:right-15 lg:right-15 bottom-5 p-3 rounded-full bg-amber-500 group-hover:bg-amber-600'>
-                  <ArrowUpRight className='w-8 h-8 text-white'/>
+                  <ArrowUpRight className='w-6 h-6 sm:w-8 sm:h-8 text-white'/>
                 </div>
              
 
@@ -34,53 +39,39 @@ function LowRiskIndustries() {
             {/* Second */}
             <div className='grid grid-cols-2 gap-1 justify-center w-full max-w-xl'>
             
-                        <div className='flex justify-center'>
+                        <div className='flex justify-center cursor-pointer' onClick={()=> navigate('/vape')}>
                           <div className='bg-transparent hover:bg-amber-500 hover:text-white text-white w-50 flex flex-col gap-4 justify-center items-center rounded-3xl group py-5'>
                           <img src="/Home/LowRiskIndustries/Vape.png" alt="img1" className='w-10 h-10 md:w-14 md:h-14 invert brightness-10' />
                           <p className=' font-bold text-md'>Vape Shops</p>
                          </div>
                         </div>
             
-                        <div className='flex justify-center'>
+                        <div className='flex justify-center cursor-pointer' onClick={()=> navigate('/groceries')}>
                           <div className='bg-transparent hover:bg-amber-500 hover:text-white text-white w-50 flex flex-col gap-4 justify-center items-center rounded-3xl group py-5'>
                           <img src="/Home/LowRiskIndustries/Groceries.png" alt="img1" className='w-10 h-10 md:w-14 md:h-14 invert brightness-10' />
                           <p className=' font-bold text-md'>Groceries</p>
                          </div>
                         </div>
             
-                        <div className='flex justify-center'>
+                        <div className='flex justify-center cursor-pointer' onClick={()=> navigate('/restaurants')}>
                           <div className='bg-transparent hover:bg-amber-500 hover:text-white text-white w-50 flex flex-col gap-4 justify-center items-center rounded-3xl group py-5'>
                           <img src="/Home/LowRiskIndustries/Resturant.png" alt="img1" className='w-10 h-10 md:w-14 md:h-14 invert brightness-10' />
                           <p className=' font-bold text-md'>Restaurants</p>
                          </div>
                         </div>
             
-                        <div className='flex justify-center'>
-                          <div className='bg-transparent hover:bg-amber-500 hover:text-white text-white w-50 flex flex-col gap-4 justify-center items-center rounded-3xl group py-5'>
-                          <img src="/Home/LowRiskIndustries/GasStation.png" alt="img1" className='w-14 h-14 md:w-14 md:h-14 invert brightness-10' />
-                          <p className=' font-bold text-md'>Gas Stations</p>
-                         </div>
-                        </div>
-            
-                        <div className='flex justify-center'>
-                          <div className='bg-transparent hover:bg-amber-500 hover:text-white text-white  w-50 flex flex-col gap-4 justify-center items-center rounded-3xl group py-5'>
-                          <img src="/Home/LowRiskIndustries/Resturant.png" alt="img1" className='w-8 h-8 md:w-12 md:h-12 invert brightness-10' />
-                          <p className=' font-bold text-md'>Restaurants</p>
-                         </div>
-                        </div>
-            
-
-                        <div className='relative flex justify-center cursor-pointer group pt-5'>
-                          <img src="/Home/GetStarted/ViewIndustries.png" alt="ViewIndustries" className='w-40 md:w-50 lg:w-60 md:h-30' />
+                        <Link to={'/faqs'} className='relative flex justify-center cursor-pointer group pt-5 col-span-2 '>
+                          <img src="/Home/GetStarted/ViewIndustries.png" alt="ViewIndustries" className='w-70 h-20 md:w-100 lg:w-100 md:h-30' />
                          
-                            <h1 className='absolute top-10 md:left-20 md:top-10 lg:left-10 lg:top-8 text-xl md:text-2xl font-medium text-white'>View All <br /> Industries</h1>
+                            <h1 className='absolute top-6 left-20 md:left-30 md:top-10 lg:left-30 lg:top-8 text-xl md:text-2xl font-medium text-white'>Any <br /> Questions?</h1>
             
-                            <div className='hidden lg:block absolute right-10 bottom-7 p-1 rounded-full bg-amber-500 group-hover:bg-amber-600'>
-                              <ArrowUpRight className='w-7 h-7 text-white' strokeWidth={1.5}/>
+                            <div className='absolute right-17 bottom-3 md:right-28 lg:right-28 md:bottom-5 p-1 rounded-full bg-amber-500 group-hover:bg-amber-600'>
+                              <ArrowUpRight className='w-8 h-8 text-white' strokeWidth={1.5}/>
                             </div>
                          
             
-                        </div>
+                        </Link>
+  
             
             
             

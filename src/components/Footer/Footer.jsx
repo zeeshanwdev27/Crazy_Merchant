@@ -113,7 +113,7 @@ function Footer() {
             <div className='flex flex-col gap-5'>
             <h1 className='text-[#F29200] text-2xl sm:text-2xl font-bold'>Address</h1>
             <span className='text-base sm:text-lg w-full max-w-full lg:max-w-sm'>
-              TX USA
+              TX, USA
             </span>
             </div>
 
