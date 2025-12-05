@@ -201,6 +201,7 @@ function Footer() {
           Copyright © 2025 Crazy Merchants. All rights reserved.
         </p>
         <ul className='flex flex-wrap justify-center sm:justify-start gap-3 sm:gap-5'>
+          <Link to={'/faqs'}><li className='text-sm sm:text-md lg:text-lg hover:text-[#F29200] cursor-pointer'>FAQ's</li></Link>
           <Link to={'/privacy-policy'}><li className='text-sm sm:text-md lg:text-lg hover:text-[#F29200] cursor-pointer'>Privacy Policy</li></Link>
           <Link to={'/terms-of-service'}><li className='text-sm sm:text-md lg:text-lg hover:text-[#F29200] cursor-pointer'>Terms of Service</li></Link>
         </ul>
