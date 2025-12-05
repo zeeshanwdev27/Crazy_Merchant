@@ -18,12 +18,12 @@ function VapeShops() {
     <meta property="og:title" content="Vape Shops Payment Processing Solutions | Crazy Merchants" />
     <meta property="og:description" content="Secure and efficient payment solutions tailored for vape shops. Learn about high-risk merchant accounts and benefits for your business." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://crazymerchants.com/vape-shops-payment-processing" />
-    <meta property="og:image" content="https://crazymerchants.com/og-image-vape.jpg" />
+    <meta property="og:url" content="https://crazymerchants.com/favicon.png" />
+    <meta property="og:image" content="https://crazymerchants.com/favicon.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Vape Shops Payment Processing Solutions | Crazy Merchants" />
     <meta name="twitter:description" content="Explore secure and reliable payment processing solutions for vape shops, including high-risk merchant accounts." />
-    <meta name="twitter:image" content="https://crazymerchants.com/og-image-vape.jpg" />
+    <meta name="twitter:image" content="https://crazymerchants.com/favicon.png" />
 </Helmet>
 
     

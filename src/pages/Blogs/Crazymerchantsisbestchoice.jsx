@@ -18,12 +18,12 @@ function Crazymerchantsisbestchoice() {
     <meta property="og:title" content="Why Crazy Merchants Is the Best Choice for High-Risk Payment Processing | Crazy Merchants" />
     <meta property="og:description" content="Explore why high-risk businesses choose Crazy Merchants for secure and reliable payment processing. Learn about our tailored solutions and expert support." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://crazymerchants.com/high-risk-payment-processing" />
-    <meta property="og:image" content="https://crazymerchants.com/og-image-high-risk-solutions.jpg" />
+    <meta property="og:url" content="https://crazymerchants.com/favicon.png" />
+    <meta property="og:image" content="https://crazymerchants.com/favicon.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Why Crazy Merchants Is the Best Choice for High-Risk Payment Processing | Crazy Merchants" />
     <meta name="twitter:description" content="Discover why Crazy Merchants is trusted by high-risk businesses for secure, reliable, and tailored payment processing solutions." />
-    <meta name="twitter:image" content="https://crazymerchants.com/og-image-high-risk-solutions.jpg" />
+    <meta name="twitter:image" content="https://crazymerchants.com/favicon.png" />
 </Helmet>
 
 

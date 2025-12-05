@@ -18,12 +18,12 @@ function Highriskbusinessesmistakes() {
     <meta property="og:title" content="Top 5 Mistakes High-Risk Businesses | Crazy Merchants" />
     <meta property="og:description" content="Avoid common pitfalls in payment processing for high-risk businesses. Learn the top 5 mistakes and how to overcome them effectively." />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://crazymerchants.com/top-5-mistakes-high-risk-businesses" />
-    <meta property="og:image" content="https://crazymerchants.com/og-image-high-risk-mistakes.jpg" />
+    <meta property="og:url" content="https://crazymerchants.com/favicon.png" />
+    <meta property="og:image" content="https://crazymerchants.com/favicon.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Top 5 Mistakes High-Risk Businesses | Crazy Merchants" />
     <meta name="twitter:description" content="Learn the top 5 mistakes high-risk businesses make and how to optimize your merchant account strategy." />
-    <meta name="twitter:image" content="https://crazymerchants.com/og-image-high-risk-mistakes.jpg" />
+    <meta name="twitter:image" content="https://crazymerchants.com/favicon.png" />
 </Helmet>
 
     

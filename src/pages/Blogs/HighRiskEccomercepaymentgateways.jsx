@@ -18,12 +18,12 @@ function HighRiskEccomercepaymentgateways() {
     <meta property="og:title" content="Top 10 High-Risk Payment Gateways for E-Commerce Businesses | Crazy Merchants" />
     <meta property="og:description" content="Explore the best payment gateways for high-risk e-commerce businesses. Compare features, reliability, and compliance to find the right solution." />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://crazymerchants.com/top-10-high-risk-payment-gateways" />
-    <meta property="og:image" content="https://crazymerchants.com/og-image-high-risk-gateways.jpg" />
+    <meta property="og:url" content="https://crazymerchants.com/favicon.png" />
+    <meta property="og:image" content="https://crazymerchants.com/favicon.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Top 10 High-Risk Payment Gateways for E-Commerce Businesses | Crazy Merchants" />
     <meta name="twitter:description" content="Learn about the top 10 payment gateways for high-risk e-commerce merchants and how to choose the best one for your business." />
-    <meta name="twitter:image" content="https://crazymerchants.com/og-image-high-risk-gateways.jpg" />
+    <meta name="twitter:image" content="https://crazymerchants.com/favicon.png" />
 </Helmet>
 
     
