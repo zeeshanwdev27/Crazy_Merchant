@@ -105,15 +105,15 @@ function Home() {
         </div>
 
         {/* form image */}
-        <div className="mt-10 lg:mt-0 mx-auto flex justify-center items-center bg-[url('Home/HeroSection/formbackground.png')] w-full max-w-5xl lg:h-[55vh] bg-cover bg-no-repeat overflow-hidden border-5 border-[#F29200]/15 rounded-4xl">
+        <div className="mt-10 lg:mt-0 mx-auto flex justify-center items-center w-full max-w-5xl lg:h-[55vh] bg-cover bg-no-repeat overflow-hidden border-5 border-[#F29200]/15 rounded-4xl"
+        style={{ backgroundImage: `url(/Home/HeroSection/formbackground.png)` }}
+        >
           <div className="flex flex-col gap-5 lg:gap-10 w-full max-w-xl md:max-w-2xl lg:max-w-4xl top-240 md:top-185 lg:top-70 px-3 md:px-5 lg:px-0 py-5 lg:py-0">
             
             <div className="flex flex-col gap-3 items-center lg:items-center">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#F29200]">Get Started Today!</h1>
               <p className="text-sm md:text-md lg:text-lg text-center">Best Solution for Travel and Call Center Businesses</p>
             </div>
-
-
 
             <form 
             onSubmit={async (e) => {
